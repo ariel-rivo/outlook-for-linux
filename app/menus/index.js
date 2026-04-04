@@ -17,14 +17,22 @@ const DocumentationWindow = require("../documentationWindow");
 const GpuInfoWindow = require("../gpuInfoWindow");
 const autoUpdaterModule = require("../autoUpdater");
 
-// Show a Copy context menu when the renderer captures selected text in a read-only area
-// (Outlook suppresses the native menu there, so the preload sends the text directly via IPC)
+// Context menu for read-only areas (email body etc.) where Outlook suppresses the native menu.
+// The preload sends the current selection text (empty string when nothing is selected).
 ipcMain.on("show-selection-context-menu", (event, selectionText) => {
-  if (typeof selectionText !== "string" || selectionText.length === 0 || selectionText.length > 100000) return;
-  const menu = new Menu();
-  menu.append(new MenuItem({ label: "Copy", click: () => clipboard.writeText(selectionText) }));
+  if (typeof selectionText !== "string" || selectionText.length > 100000) return;
   const win = BrowserWindow.fromWebContents(event.sender);
-  if (win) menu.popup({ window: win });
+  if (!win) return;
+  const menu = new Menu();
+  if (selectionText) {
+    menu.append(new MenuItem({ label: "Copy", click: () => clipboard.writeText(selectionText) }));
+    menu.append(new MenuItem({ type: "separator" }));
+  }
+  menu.append(new MenuItem({
+    label: "Select All",
+    click: () => win.webContents.send("select-all-in-context"),
+  }));
+  menu.popup({ window: win });
 });
 
 let _Menus_onSpellCheckerLanguageChanged = new WeakMap();
@@ -429,6 +437,12 @@ function buildEditContextMenu(menu, menus) {
   menu.append(
     new MenuItem({
       role: "paste",
+    }),
+  );
+
+  menu.append(
+    new MenuItem({
+      role: "selectAll",
     }),
   );
 

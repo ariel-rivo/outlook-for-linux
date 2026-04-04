@@ -1,27 +1,68 @@
 const { ipcRenderer } = require("electron");
 
-// Intercept contextmenu on editable targets before Outlook's capture-phase handler
-// so Chromium sends ShowContextMenu (enabling cut/copy/paste/spell-check via Electron's
-// context-menu event). Non-editable, non-link elements with a text selection are also
-// intercepted so the user can copy selected text from read-only areas (e.g. email body).
-// Links are left alone so Outlook's custom link menus continue to work.
+// Returns true when the element is inside an Outlook interactive list item
+// (role="option" / role="treeitem") so we leave those alone for Outlook's own context menus.
+function isInsideInteractiveListItem(el) {
+  let node = el;
+  for (let i = 0; i < 10 && node; i++) {
+    const role = node.getAttribute?.("role");
+    if (role === "option" || role === "treeitem") return true;
+    node = node.parentElement;
+  }
+  return false;
+}
+
+// Tracks the element that was right-clicked so Select All can scope to its container.
+let _lastContextTarget = null;
+
+// Intercept contextmenu before Outlook's capture-phase handler.
+//  - Editable elements: let Electron handle natively (cut/copy/paste/spell-check).
+//  - Read-only areas that are not links and not Outlook list items: show our own menu
+//    with Copy (when text is selected) and Select All via IPC.
+//  - Links and Outlook list items: leave alone so their custom menus keep working.
 window.addEventListener(
   "contextmenu",
   (e) => {
     const t = e.target;
     if (t.isContentEditable || t.tagName === "INPUT" || t.tagName === "TEXTAREA") {
       e.stopImmediatePropagation();
-    } else {
-      const selectionText = window.getSelection()?.toString();
-      if (selectionText && !t.closest("a[href]")) {
-        e.stopImmediatePropagation();
-        e.preventDefault();
-        ipcRenderer.send("show-selection-context-menu", selectionText);
-      }
+    } else if (!t.closest("a[href]") && !isInsideInteractiveListItem(t)) {
+      _lastContextTarget = t;
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      ipcRenderer.send("show-selection-context-menu", window.getSelection()?.toString() ?? "");
     }
   },
   true,
 );
+
+// Select the contents of the nearest reading-pane container around the last right-clicked element.
+ipcRenderer.on("select-all-in-context", () => {
+  const target = _lastContextTarget;
+  let container = document.body;
+  if (target) {
+    let node = target;
+    while (node && node !== document.body) {
+      // Outlook sections use data-app-section (e.g. "ReadingPane")
+      if (node.hasAttribute?.("data-app-section")) { container = node; break; }
+      const role = node.getAttribute?.("role");
+      if (role === "region" || role === "article" || role === "main") { container = node; break; }
+      // Scrollable container that's large enough to be the reading pane
+      const style = window.getComputedStyle(node);
+      if (
+        (style.overflow === "auto" || style.overflow === "scroll" ||
+         style.overflowY === "auto" || style.overflowY === "scroll") &&
+        node.scrollHeight > window.innerHeight * 0.3
+      ) { container = node; break; }
+      node = node.parentElement;
+    }
+  }
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  const range = document.createRange();
+  range.selectNodeContents(container);
+  sel.addRange(range);
+});
 
 // Note: IPC validation handled by main process, no need for duplicate validation here
 globalThis.electronAPI = {
