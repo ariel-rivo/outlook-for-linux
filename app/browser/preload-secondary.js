@@ -1,7 +1,5 @@
 'use strict';
 
-const { ipcRenderer } = require('electron');
-
 function isInsideInteractiveListItem(el) {
   let node = el;
   for (let i = 0; i < 10 && node; i++) {
@@ -12,41 +10,14 @@ function isInsideInteractiveListItem(el) {
   return false;
 }
 
-let _lastContextTarget = null;
-
+// Block Outlook's capture-phase contextmenu handler so it can't call preventDefault().
+// We do NOT call preventDefault() ourselves — this lets Electron's context-menu event
+// fire in the main process, where assignContextMenuHandler handles the menu.
 window.addEventListener('contextmenu', (e) => {
   const t = e.target;
   if (t.isContentEditable || t.tagName === 'INPUT' || t.tagName === 'TEXTAREA') {
-    e.stopImmediatePropagation();
+    e.stopImmediatePropagation(); // let Electron handle editable areas natively
   } else if (!t.closest('a[href]') && !isInsideInteractiveListItem(t)) {
-    _lastContextTarget = t;
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    ipcRenderer.send('show-selection-context-menu', window.getSelection()?.toString() ?? '');
+    e.stopImmediatePropagation(); // block Outlook; no preventDefault so context-menu fires
   }
 }, true);
-
-ipcRenderer.on('select-all-in-context', () => {
-  const target = _lastContextTarget;
-  let container = document.body;
-  if (target) {
-    let node = target;
-    while (node && node !== document.body) {
-      if (node.hasAttribute?.('data-app-section')) { container = node; break; }
-      const role = node.getAttribute?.('role');
-      if (role === 'region' || role === 'article' || role === 'main') { container = node; break; }
-      const style = window.getComputedStyle(node);
-      if (
-        (style.overflow === 'auto' || style.overflow === 'scroll' ||
-         style.overflowY === 'auto' || style.overflowY === 'scroll') &&
-        node.scrollHeight > window.innerHeight * 0.3
-      ) { container = node; break; }
-      node = node.parentElement;
-    }
-  }
-  const sel = window.getSelection();
-  sel.removeAllRanges();
-  const range = document.createRange();
-  range.selectNodeContents(container);
-  sel.addRange(range);
-});

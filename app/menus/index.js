@@ -418,6 +418,41 @@ function addTextEditMenuItems(params, menu, menus) {
         click: () => clipboard.writeText(params.linkURL),
       }),
     );
+  } else {
+    // Read-only area (email body, etc.) in a secondary window.
+    // preload-secondary.js does not call preventDefault(), so context-menu fires here.
+    if (params.selectionText) {
+      menu.append(
+        new MenuItem({
+          label: "Copy",
+          click: () => clipboard.writeText(params.selectionText),
+        }),
+      );
+      menu.append(new MenuItem({ type: "separator" }));
+    }
+    const { x, y } = params;
+    menu.append(
+      new MenuItem({
+        label: "Select All",
+        click: () => menus.window.webContents.executeJavaScript(
+          `(function(){` +
+          `var el=document.elementFromPoint(${x},${y});` +
+          `var container=document.body;` +
+          `if(el){var node=el;` +
+          `while(node&&node!==document.body){` +
+          `if(node.hasAttribute('data-app-section')){container=node;break;}` +
+          `var r=node.getAttribute('role');` +
+          `if(r==='region'||r==='article'||r==='main'){container=node;break;}` +
+          `var s=window.getComputedStyle(node);` +
+          `if((s.overflow==='auto'||s.overflow==='scroll'||s.overflowY==='auto'||s.overflowY==='scroll')&&node.scrollHeight>window.innerHeight*0.3){container=node;break;}` +
+          `node=node.parentElement;}` +
+          `}` +
+          `var sel=window.getSelection();sel.removeAllRanges();` +
+          `var range=document.createRange();range.selectNodeContents(container);sel.addRange(range);` +
+          `})()`
+        ),
+      }),
+    );
   }
 }
 
