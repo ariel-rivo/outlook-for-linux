@@ -1,20 +1,21 @@
 'use strict';
 
-// Outlook registers a capture-phase contextmenu listener that calls
-// stopImmediatePropagation() + preventDefault(), silencing Electron's
-// webContents context-menu event for all elements.
-//
-// We selectively intercept only editable targets (contenteditable, input,
-// textarea) where Outlook suppresses the browser menu without showing its own.
-// For links and other elements Outlook's handler is allowed to run so its
-// custom context menus continue to work.
-//
-// Preload runs before page scripts, so this listener is always registered first.
-// Not calling preventDefault leaves defaultPrevented=false so Chromium sends
-// ShowContextMenu to the main process, firing Electron's context-menu event.
+// Intercept contextmenu on editable targets before Outlook's capture-phase handler
+// so Chromium sends ShowContextMenu (enabling cut/copy/paste/spell-check via Electron's
+// context-menu event). Non-editable, non-link elements with a text selection are also
+// intercepted so the user can copy selected text from read-only areas.
+// Links are left alone so Outlook's custom link menus continue to work.
 window.addEventListener('contextmenu', (e) => {
   const t = e.target;
   if (t.isContentEditable || t.tagName === 'INPUT' || t.tagName === 'TEXTAREA') {
     e.stopImmediatePropagation();
+  } else {
+    const selectionText = window.getSelection()?.toString();
+    if (selectionText && !t.closest('a[href]')) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      // ipcRenderer is available via require() in secondary preload context
+      require('electron').ipcRenderer.send('show-selection-context-menu', selectionText);
+    }
   }
 }, true);

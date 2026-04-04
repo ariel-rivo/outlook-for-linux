@@ -2,6 +2,7 @@ const {
   app,
   Menu,
   MenuItem,
+  BrowserWindow,
   clipboard,
   dialog,
   session,
@@ -15,6 +16,16 @@ const { SpellCheckProvider } = require("../spellCheckProvider");
 const DocumentationWindow = require("../documentationWindow");
 const GpuInfoWindow = require("../gpuInfoWindow");
 const autoUpdaterModule = require("../autoUpdater");
+
+// Show a Copy context menu when the renderer captures selected text in a read-only area
+// (Outlook suppresses the native menu there, so the preload sends the text directly via IPC)
+ipcMain.on("show-selection-context-menu", (event, selectionText) => {
+  if (typeof selectionText !== "string" || selectionText.length === 0 || selectionText.length > 100000) return;
+  const menu = new Menu();
+  menu.append(new MenuItem({ label: "Copy", click: () => clipboard.writeText(selectionText) }));
+  const win = BrowserWindow.fromWebContents(event.sender);
+  if (win) menu.popup({ window: win });
+});
 
 let _Menus_onSpellCheckerLanguageChanged = new WeakMap();
 class Menus {
