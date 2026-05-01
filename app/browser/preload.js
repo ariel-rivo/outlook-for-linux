@@ -698,8 +698,8 @@ function processNotificationElement(element) {
 }
 
 /**
- * Check if button is an email notification by Outlook DOM structure
- * Email notifications have: .ZJg8d (sender), .KTZ84 (subject), .mrxI1 (body)
+ * Check if button is an email notification by Outlook DOM structure.
+ * Outlook currently renders sender in .KTZ84, subject in .ZJg8d, and preview body in .mrxI1.
  */
 function isEmailNotification(button) {
   return !!(
@@ -713,10 +713,10 @@ function isEmailNotification(button) {
  * Extract email data from notification button
  */
 function extractEmailData(button, ariaLabel) {
-  const senderElement = button.querySelector(".ZJg8d > div:first-child");
+  const senderElement = button.querySelector(".KTZ84");
   const sender = senderElement?.textContent?.trim();
 
-  const subjectElement = button.querySelector(".KTZ84");
+  const subjectElement = button.querySelector(".ZJg8d > div:first-child");
   const subject = subjectElement?.textContent?.trim();
 
   const bodyElement = button.querySelector(".mrxI1");
