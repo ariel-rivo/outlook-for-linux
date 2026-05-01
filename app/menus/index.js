@@ -32,6 +32,11 @@ ipcMain.on("show-selection-context-menu", (event, selectionText) => {
     label: "Select All",
     click: () => win.webContents.send("select-all-in-context"),
   }));
+  menu.append(new MenuItem({ type: "separator" }));
+  menu.append(new MenuItem({
+    label: "Reload",
+    click: () => win.reload(),
+  }));
   menu.popup({ window: win });
 });
 

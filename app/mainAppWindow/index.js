@@ -1115,12 +1115,18 @@ function getWebRequestFilterFromURL() {
   return filter;
 }
 
-function onBeforeInput(_event, input) {
+function onBeforeInput(event, input) {
   isControlPressed = input.control;
 
   // Ctrl+Home: navigate back to Outlook home (recovery for stuck/broken sessions)
   if (input.control && input.key === "Home" && window) {
     window.webContents.loadURL(config.url);
+  }
+
+  // Ctrl+R: reload the page - intercept before Outlook can treat it as a different shortcut
+  if (input.control && !input.shift && !input.alt && input.key.toLowerCase() === "r" && input.type === "keyDown") {
+    event.preventDefault();
+    connectionManager.refresh();
   }
 }
 
