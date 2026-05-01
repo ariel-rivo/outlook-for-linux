@@ -168,6 +168,7 @@ globalThis.electronAPI = {
   // Navigation
   navigateBack: () => ipcRenderer.send("navigate-back"),
   navigateForward: () => ipcRenderer.send("navigate-forward"),
+  reload: () => ipcRenderer.send("reload"),
   getNavigationState: () => ipcRenderer.invoke("get-navigation-state"),
   onNavigationStateChanged: (callback) => {
     if (typeof callback !== "function") {

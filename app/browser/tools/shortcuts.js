@@ -60,6 +60,8 @@ function whenWindowReady(callback, attempt = 0) {
 
 function addEventListeners() {
   globalThis.addEventListener("keydown", keyDownEventHandler, false);
+  // Capture-phase handler so we intercept Ctrl+R / F5 before Outlook's own listeners.
+  globalThis.addEventListener("keydown", reloadKeyHandler, true);
   globalThis.addEventListener("wheel", wheelEventHandler, { passive: false });
   whenIframeReady((iframe) => {
     iframe.contentDocument.addEventListener(
@@ -67,6 +69,7 @@ function addEventListeners() {
       keyDownEventHandler,
       false,
     );
+    iframe.contentDocument.addEventListener("keydown", reloadKeyHandler, true);
     iframe.contentDocument.addEventListener("wheel", wheelEventHandler, {
       passive: false,
     });
@@ -81,6 +84,14 @@ function whenIframeReady(callback, attempt = 0) {
     console.warn('[SHORTCUTS] Iframe not available after', MAX_READY_RETRIES, 'attempts, giving up');
   } else {
     setTimeout(() => whenIframeReady(callback, attempt + 1), 1000);
+  }
+}
+
+function reloadKeyHandler(event) {
+  if ((event.ctrlKey && event.key === 'r') || event.key === 'F5') {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    globalThis.electronAPI?.reload();
   }
 }
 

@@ -79,6 +79,7 @@ const allowedChannels = new Set([
   "navigate-forward",
   "get-navigation-state",
   "navigation-state-changed",
+  "reload",
 
   // Microsoft Graph API integration
   "graph-api-get-user-profile",

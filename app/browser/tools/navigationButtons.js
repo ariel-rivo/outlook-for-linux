@@ -8,6 +8,7 @@ class NavigationButtons {
   #initialized = false;
   #backButton = null;
   #forwardButton = null;
+  #refreshButton = null;
 
   init(config) {
     if (this.#initialized) {
@@ -106,6 +107,14 @@ class NavigationButtons {
 
     container.appendChild(backButton);
     container.appendChild(forwardButton);
+
+    // Create refresh button
+    const refreshButton = this.createNavigationButton(
+      'tfl-nav-refresh',
+      'Refresh',
+      'M4.646 4.646a.5.5 0 01.708 0L10 9.293l4.646-4.647a.5.5 0 01.708.708l-5 5a.5.5 0 01-.708 0l-5-5a.5.5 0 010-.708zM10 3a7 7 0 100 14A7 7 0 0010 3zm-8 7a8 8 0 1116 0A8 8 0 012 10zm8-5a.5.5 0 01.5.5v4.793l2.146-2.147a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 01.708-.708L9.5 10.293V5.5A.5.5 0 0110 5z'
+    );
+    container.appendChild(refreshButton);
 
     // Insert before the search region as a sibling (not inside it)
     searchRegion.parentNode.insertBefore(container, searchRegion);

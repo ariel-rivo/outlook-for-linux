@@ -240,6 +240,15 @@ if (gotTheLock) {
     }
   });
 
+  // Reload the current page
+  ipcMain.on("reload", (event) => {
+    const webContents = event.sender;
+    if (webContents && !webContents.isDestroyed()) {
+      console.debug("Reloading page");
+      webContents.reload();
+    }
+  });
+
   // Navigate forward in browser history
   ipcMain.on("navigate-forward", (event) => {
     const webContents = event.sender;

@@ -20,7 +20,7 @@ exports = module.exports = (Menus) => ({
       : []),
     {
       label: "Refresh",
-      accelerator: "ctrl+R",
+      accelerator: "F5",
       click: () => Menus.reload(),
     },
     ...(process.env.APPIMAGE
