@@ -208,7 +208,7 @@ function showReminderNotification(notification) {
 			let line = `\u2022 ${r.subject}`;
 			if (r.timeUntil) line += ` (${r.timeUntil})`;
 			return line;
-		}).join('\n');
+		}).join(' | ');
 	}
 
 	if (reminderNotificationHandle) {
@@ -246,10 +246,10 @@ function showEmailNotification(notification) {
 
 		if (senderNames.length === 1) {
 			title = `${emails.length} new emails from ${senderNames[0]}`;
-			body = emails.map(e => `\u2022 Subject: ${e.subject}`).join('\n');
+			body = emails.map(e => `\u2022 Subject: ${e.subject}`).join(' | ');
 		} else {
 			title = `${emails.length} New Emails`;
-			body = emails.map(e => `${e.address}\n\u2022 Subject: ${e.subject}`).join('\n\n');
+			body = emails.map(e => `${e.address}: ${e.subject}`).join(' | ');
 		}
 	}
 
