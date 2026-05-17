@@ -28,6 +28,20 @@ let currentEmailCount = 0;
 let currentReminderCount = 0;
 let alternatingInterval = null;
 
+function clearEmailNotificationState(closeNotification = false) {
+	emails = [];
+
+	if (closeNotification && emailNotificationHandle) {
+		const existingNotificationHandle = emailNotificationHandle;
+		emailNotificationHandle = null;
+		existingNotificationHandle.close();
+	}
+}
+
+function handleMainWindowFocus() {
+	clearEmailNotificationState(true);
+}
+
 /**
  * Initialize the notification module
  * @param {BrowserWindow} window - The main application window
@@ -35,9 +49,18 @@ let alternatingInterval = null;
  * @param {object} menus - The Menus instance for updating tray badge
  */
 function init(window, icon, menus) {
+	if (mainWindow) {
+		mainWindow.removeListener('focus', handleMainWindowFocus);
+	}
+
 	mainWindow = window;
 	iconPath = icon;
 	menusInstance = menus;
+
+	if (mainWindow) {
+		mainWindow.on('focus', handleMainWindowFocus);
+	}
+
 	console.info('[Notification Module] Initialized');
 }
 
@@ -47,6 +70,11 @@ function init(window, icon, menus) {
  */
 function updateBadgeFromUnreadCount(count) {
 	console.debug('[Notification Module] updateBadgeFromUnreadCount:', count);
+	if (count < currentEmailCount) {
+		console.debug('[Notification Module] Unread count decreased, clearing stale email notification state');
+		clearEmailNotificationState(true);
+	}
+
 	currentEmailCount = count;
 	updateAlternatingBadge();
 }
@@ -115,14 +143,10 @@ function updateTrayBadge(count, type) {
  */
 function reset() {
 	reminders = [];
-	emails = [];
+	clearEmailNotificationState(true);
 	if (reminderNotificationHandle) {
 		reminderNotificationHandle.close();
 		reminderNotificationHandle = null;
-	}
-	if (emailNotificationHandle) {
-		emailNotificationHandle.close();
-		emailNotificationHandle = null;
 	}
 }
 
@@ -184,7 +208,7 @@ function showReminderNotification(notification) {
 			let line = `\u2022 ${r.subject}`;
 			if (r.timeUntil) line += ` (${r.timeUntil})`;
 			return line;
-		}).join('\n');
+		}).join(' | ');
 	}
 
 	if (reminderNotificationHandle) {
@@ -222,21 +246,28 @@ function showEmailNotification(notification) {
 
 		if (senderNames.length === 1) {
 			title = `${emails.length} new emails from ${senderNames[0]}`;
-			body = emails.map(e => `\u2022 Subject: ${e.subject}`).join('\n');
+			body = emails.map(e => `\u2022 Subject: ${e.subject}`).join(' | ');
 		} else {
 			title = `${emails.length} New Emails`;
-			body = emails.map(e => `${e.address}\n\u2022 Subject: ${e.subject}`).join('\n\n');
+			body = emails.map(e => `${e.address}: ${e.subject}`).join(' | ');
 		}
 	}
 
 	if (emailNotificationHandle) {
-		emailNotificationHandle.close();
+		const existingNotificationHandle = emailNotificationHandle;
+		emailNotificationHandle = null;
+		existingNotificationHandle.close();
 	}
 
-	emailNotificationHandle = createNotification(title, body, () => {
+	const notificationHandle = createNotification(title, body, () => {
+		if (emailNotificationHandle !== notificationHandle) {
+			return;
+		}
+
 		emailNotificationHandle = null;
 		emails = [];
 	});
+	emailNotificationHandle = notificationHandle;
 
 	emailNotificationHandle.show();
 }

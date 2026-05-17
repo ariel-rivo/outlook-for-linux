@@ -6,7 +6,8 @@
   <name>Portal for Outlook</name>
   <summary>Unofficial Microsoft Outlook client for Linux</summary>
   <description>
-    <p>Experience seamless integration with the Microsoft Outlook Web App in a standalone Electron application.</p>
+    <p>Experience seamless integration with the Microsoft Outlook Web App in a standalone Electron
+      application.</p>
     <p>This application is an unofficial client for Microsoft Outlook.</p>
   </description>
   <url type="homepage">https://github.com/ariel-rivo/outlook-for-linux</url>
@@ -14,19 +15,33 @@
   <url type="bugtracker">https://github.com/ariel-rivo/outlook-for-linux/issues</url>
   <launchable type="desktop-id">com.github.ariel-rivo.outlook_for_linux.desktop</launchable>
   <releases>
+    <release version="2.7.14" date="2026-05-05">
+      <description>
+        <ul>
+          <li>Add new email notification separator</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.7.13" date="2026-03-29">
       <description>
         <ul>
-          <li>Fix: Ensure all notification methods return a Notification-like stub for Outlook. - by @ariel-rivo (#2329)</li>
-          <li>Fix: Strip report-only CSP for non-Outlook domains and add auth.cspBypassDomains for SSO login - by @ariel-rivo (#2330)</li>
-          <li>Update roadmap and FIDO2 research with community validation results. - by @ariel-rivo (#2341)</li>
-          <li>Add cross-distro CI smoke test and restructure test directory. - by @ariel-rivo (#2344)</li>
+          <li>Fix: Ensure all notification methods return a Notification-like stub for Outlook. - by
+            @ariel-rivo (#2329)</li>
+          <li>Fix: Strip report-only CSP for non-Outlook domains and add auth.cspBypassDomains for
+            SSO login - by @ariel-rivo (#2330)</li>
+          <li>Update roadmap and FIDO2 research with community validation results. - by @ariel-rivo
+            (#2341)</li>
+          <li>Add cross-distro CI smoke test and restructure test directory. - by @ariel-rivo
+            (#2344)</li>
           <li>Add CodeRabbit AI for automated code reviews. - by @ariel-rivo (#2348)</li>
-          <li>Fix changelog generation script errors and auto-create changelogs for fork PRs. - by @ariel-rivo (#2352)</li>
-          <li>Add option to force idle state via file for Wayland environments. - by @Spritkopf (#2355)</li>
+          <li>Fix changelog generation script errors and auto-create changelogs for fork PRs. - by
+            @ariel-rivo (#2352)</li>
+          <li>Add option to force idle state via file for Wayland environments. - by @Spritkopf
+            (#2355)</li>
           <li>Revert FIDO2 hardware security key support for Linux - by @ariel-rivo (#2356)</li>
           <li>Add system performance research and proposed improvements - by @ariel-rivo (#2360)</li>
-          <li>Update roadmap with current PRs, releases, and Electron upgrade status. - by @ariel-rivo (#2361)</li>
+          <li>Update roadmap with current PRs, releases, and Electron upgrade status. - by
+            @ariel-rivo (#2361)</li>
           <li>Update flatted dependency to 3.4.2, including fix for CWE-1321 (#2362)</li>
           <li>Update: Bump eslint from 10.0.3 to 10.1.0 (#2363)</li>
           <li>Add Butler.json to enable code navigation for triage bot - by @ariel-rivo (#2368)</li>
@@ -40,8 +55,10 @@
     <release version="2.7.12" date="2026-03-15">
       <description>
         <ul>
-          <li>Update roadmap and FIDO2 research with community validation results. - by @ariel-rivo (#2341)</li>
-          <li>Fix: Bump Electron to 39.8.2 to patch critical Skia vulnerability (CVE-2026-3909) - by @ariel-rivo (#2342)</li>
+          <li>Update roadmap and FIDO2 research with community validation results. - by @ariel-rivo
+            (#2341)</li>
+          <li>Fix: Bump Electron to 39.8.2 to patch critical Skia vulnerability (CVE-2026-3909) - by
+            @ariel-rivo (#2342)</li>
         </ul>
       </description>
     </release>
@@ -49,21 +66,32 @@
       <description>
         <ul>
           <li>feat: publish screen sharing status to MQTT (#2107) - by @ariel-rivo (#2144)</li>
-          <li>fix: expand MS Outlook protocol regex to support all deep link types - by @ariel-rivo (#2250)</li>
-          <li>feat: add real-time speaking indicator with three-state mute detection via WebRTC getStats() - by @ariel-rivo (#2299)</li>
+          <li>fix: expand MS Outlook protocol regex to support all deep link types - by @ariel-rivo
+            (#2250)</li>
+          <li>feat: add real-time speaking indicator with three-state mute detection via WebRTC
+            getStats() - by @ariel-rivo (#2299)</li>
           <li>chore(deps-dev): bump tar from 7.5.9 to 7.5.10 (#2308)</li>
           <li>fix: only reload on main frame network errors, not sub-frames - by @ariel-rivo (#2310)</li>
-          <li>Fix: Improve auth state recovery to prevent stale sign-in banners - by @ariel-rivo (#2311)</li>
-          <li>chore: add codebase review, unit tests for security modules, and fix changelog generator - by @ariel-rivo (#2312)</li>
-          <li>Fix cross-distro test failures and improve test environment consistency. - by @ariel-rivo (#2314)</li>
-          <li>Fix: Use world-writable session dir for cross-distro test compatibility - by @ariel-rivo (#2315)</li>
+          <li>Fix: Improve auth state recovery to prevent stale sign-in banners - by @ariel-rivo
+            (#2311)</li>
+          <li>chore: add codebase review, unit tests for security modules, and fix changelog
+            generator - by @ariel-rivo (#2312)</li>
+          <li>Fix cross-distro test failures and improve test environment consistency. - by
+            @ariel-rivo (#2314)</li>
+          <li>Fix: Use world-writable session dir for cross-distro test compatibility - by
+            @ariel-rivo (#2315)</li>
           <li>chore(deps-dev): bump eslint from 10.0.2 to 10.0.3 (#2316)</li>
-          <li>docs: restructure roadmap to thematic sections and add changelog pipeline enhancements - by @ariel-rivo (#2317)</li>
-          <li>Fix: Add --flags option and resolve UID conflict in Dockerfiles - by @ariel-rivo (#2321)</li>
+          <li>docs: restructure roadmap to thematic sections and add changelog pipeline enhancements
+            - by @ariel-rivo (#2317)</li>
+          <li>Fix: Add --flags option and resolve UID conflict in Dockerfiles - by @ariel-rivo
+            (#2321)</li>
           <li>docs: add repository health analysis for Feb-Mar 2026 - by @ariel-rivo (#2324)</li>
-          <li>docs: add WebAuthn/FIDO2 implementation plan for Linux security keys - by @ariel-rivo (#2327)</li>
-          <li>Fix: Update MQTT status selectors and remove broken React presence detection - by @ariel-rivo (#2333)</li>
-          <li>Fix: Update documentation links and remove template placeholders - by @ariel-rivo (#2336)</li>
+          <li>docs: add WebAuthn/FIDO2 implementation plan for Linux security keys - by @ariel-rivo
+            (#2327)</li>
+          <li>Fix: Update MQTT status selectors and remove broken React presence detection - by
+            @ariel-rivo (#2333)</li>
+          <li>Fix: Update documentation links and remove template placeholders - by @ariel-rivo
+            (#2336)</li>
           <li>chore(deps): bump undici to 7.24.1 in docs-site (includes security fixes) (#2337)</li>
           <li>Fix: Replace regex with split to avoid backtracking issues - by @ariel-rivo (#2338)</li>
         </ul>
@@ -77,10 +105,13 @@
           <li>Simplify app termination and add MQTT error handling - by @ariel-rivo (#2234)</li>
           <li>Add authenticated Playwright tests with Docker login workflow - by @ariel-rivo (#2245)</li>
           <li>fix: resolve SonarQube code smells across codebase - by @ariel-rivo (#2247)</li>
-          <li>Improve window lifecycle handling and network error resilience - by @ariel-rivo (#2249)</li>
-          <li>Improve tray window toggle behavior with minimize/restore support - by @ariel-rivo (#2253)</li>
+          <li>Improve window lifecycle handling and network error resilience - by @ariel-rivo
+            (#2249)</li>
+          <li>Improve tray window toggle behavior with minimize/restore support - by @ariel-rivo
+            (#2253)</li>
           <li>chore(deps): bump actions/github-script from 7.0.1 to 8.0.0 (#2254)</li>
-          <li>chore(deps): bump canonical/setup-lxd from 62cd335190e2b612b427db9319ea6b59ab1691f8 to d492474f6c8ceed1b716bb34c8f575a428871c70 (#2255)</li>
+          <li>chore(deps): bump canonical/setup-lxd from 62cd335190e2b612b427db9319ea6b59ab1691f8 to
+            d492474f6c8ceed1b716bb34c8f575a428871c70 (#2255)</li>
           <li>chore(deps): bump actions/setup-node from 4.4.0 to 6.2.0 (#2256)</li>
           <li>chore(deps): bump actions/upload-artifact from 4.6.2 to 7.0.0 (#2257)</li>
           <li>chore(deps): bump actions/upload-pages-artifact from 3.0.1 to 4.0.0 (#2258)</li>
@@ -92,16 +123,19 @@
           <li>docs: Clean up roadmap, research docs, and ADR statuses - by @ariel-rivo (#2265)</li>
           <li>Update - by @ariel-rivo (#2266)</li>
           <li>fix: add error details to triage bot Gemini API catch blocks - by @ariel-rivo (#2270)</li>
-          <li>fix: add JSON extraction and increase maxOutputTokens for triage bot - by @ariel-rivo (#2275)</li>
+          <li>fix: add JSON extraction and increase maxOutputTokens for triage bot - by @ariel-rivo
+            (#2275)</li>
           <li>Fix (#2278)</li>
           <li>Debug: - by @ariel-rivo (#2280)</li>
           <li>Fix: - by @ariel-rivo (#2282)</li>
           <li>Docs - by @ariel-rivo (#2286)</li>
           <li>docs: update roadmap with triage bot GitHub App migration - by @ariel-rivo (#2288)</li>
-          <li>chore: disable old triage bot workflows, migrated to GitHub App - by @ariel-rivo (#2302)</li>
+          <li>chore: disable old triage bot workflows, migrated to GitHub App - by @ariel-rivo
+            (#2302)</li>
           <li>Update (#2303)</li>
           <li>Fix: - by @ariel-rivo (#2305)</li>
-          <li>Remove unmaintained dependencies and inline their functionality - by @ariel-rivo (#2306)</li>
+          <li>Remove unmaintained dependencies and inline their functionality - by @ariel-rivo
+            (#2306)</li>
           <li>Remove old triage bot infrastructure - by @ariel-rivo (#2307)</li>
           <li>Bump (#2309)</li>
         </ul>
@@ -110,14 +144,17 @@
     <release version="2.7.9" date="2026-02-27">
       <description>
         <ul>
-          <li>Improve Quick Chat keyboard shortcut messaging and menu integration - by @ariel-rivo (#2188)</li>
-          <li>fix: restore CSS selectors and add diagnostic logging for MQTT status - by @ariel-rivo (#2197)</li>
+          <li>Improve Quick Chat keyboard shortcut messaging and menu integration - by @ariel-rivo
+            (#2188)</li>
+          <li>fix: restore CSS selectors and add diagnostic logging for MQTT status - by @ariel-rivo
+            (#2197)</li>
           <li>Fix screen sharing detection for non-English locales - by @ariel-rivo (#2210)</li>
           <li>Improve CI workflow triggers and PR artifact detection - by @ariel-rivo (#2212)</li>
           <li>Upgrade Issue Triage Bot to use Gemini 2.5 Flash model - by @ariel-rivo (#2213)</li>
           <li>Replace node-sound with Web Audio API for notifications - by @ariel-rivo (#2214)</li>
           <li>fix: screen sharing regression on Wayland/XWayland - by @bkohler (#2219)</li>
-          <li>chore(deps): bump @easyops-cn/docusaurus-search-local from 0.24.1 to 0.55.0 in /docs-site in the minor-and-patch group (#2224)</li>
+          <li>chore(deps): bump @easyops-cn/docusaurus-search-local from 0.24.1 to 0.55.0 in
+            /docs-site in the minor-and-patch group (#2224)</li>
           <li>Add cross-distro testing environment for Outlook for Linux - by @ariel-rivo (#2226)</li>
           <li>docs: update roadmap for v2.7.9 planning - by @ariel-rivo (#2227)</li>
           <li>Add XWayland optimizations configuration option - by @ariel-rivo (#2229)</li>
@@ -140,7 +177,8 @@
           <li>docs: update roadmap after v2.7.7 release - by @ariel-rivo (#2201)</li>
           <li>chore: generate initial issue index for duplicate detection - by @ariel-rivo (#2202)</li>
           <li>Improve network error handling and recovery - by @ariel-rivo (#2206)</li>
-          <li>ci: auto-remove 'awaiting user feedback' label on issue comment - by @ariel-rivo (#2208)</li>
+          <li>ci: auto-remove 'awaiting user feedback' label on issue comment - by @ariel-rivo
+            (#2208)</li>
         </ul>
       </description>
     </release>
@@ -148,7 +186,8 @@
       <description>
         <ul>
           <li>docs: update roadmap for v2.7.7 planning - by @ariel-rivo (#2187)</li>
-          <li>fix: camera crash on XWayland by skipping fake media UI flag (#2169) - by @GrzegorzKozub (#2190)</li>
+          <li>fix: camera crash on XWayland by skipping fake media UI flag (#2169) - by
+            @GrzegorzKozub (#2190)</li>
           <li>chore: remove unused agentic files and audit research docs - by @ariel-rivo (#2191)</li>
           <li>ci: raise audit level to critical for minimatch advisory - by @ariel-rivo (#2196)</li>
         </ul>
@@ -157,28 +196,37 @@
     <release version="2.7.6" date="2026-02-17">
       <description>
         <ul>
-          <li>Replace appimagetool post-processing with electron-updater research - by @ariel-rivo (#2158)</li>
+          <li>Replace appimagetool post-processing with electron-updater research - by @ariel-rivo
+            (#2158)</li>
           <li>feat: in-app auto-update for AppImage via electron-updater - by @ariel-rivo (#2159)</li>
           <li>GitHub Issue Bot Phase 2: AI-powered solution suggestions - by @ariel-rivo (#2160)</li>
-          <li>fix: only register quick chat shortcut when enabled and explicitly configured - by @ariel-rivo (#2161)</li>
+          <li>fix: only register quick chat shortcut when enabled and explicitly configured - by
+            @ariel-rivo (#2161)</li>
           <li>feat: automate snap release to candidate channel - by @ariel-rivo (#2162)</li>
           <li>docs: add Electron 40 migration research document - by @ariel-rivo (#2163)</li>
-          <li>Handle edge/prerelease version suffixes in release info generation - by @ariel-rivo (#2164)</li>
+          <li>Handle edge/prerelease version suffixes in release info generation - by @ariel-rivo
+            (#2164)</li>
           <li>docs: add code quality and hardening research - by @ariel-rivo (#2165)</li>
-          <li>docs: update plan docs with code quality hardening research and fix sidebar gaps - by @ariel-rivo (#2166)</li>
-          <li>fix: security hardening phase 1 - PII logging, resilience, input handling - by @ariel-rivo (#2167)</li>
-          <li>Refactor CSP setup to static method and centralize header handling - by @ariel-rivo (#2171)</li>
+          <li>docs: update plan docs with code quality hardening research and fix sidebar gaps - by
+            @ariel-rivo (#2166)</li>
+          <li>fix: security hardening phase 1 - PII logging, resilience, input handling - by
+            @ariel-rivo (#2167)</li>
+          <li>Refactor CSP setup to static method and centralize header handling - by @ariel-rivo
+            (#2171)</li>
           <li>ci: add lint, audit, and Dependabot to CI/CD pipeline - by @ariel-rivo (#2172)</li>
-          <li>Phase 3: Workflow permissions and CODEOWNERS for supply chain security - by @ariel-rivo (#2183)</li>
+          <li>Phase 3: Workflow permissions and CODEOWNERS for supply chain security - by
+            @ariel-rivo (#2183)</li>
         </ul>
       </description>
     </release>
     <release version="2.7.5" date="2026-02-13">
       <description>
         <ul>
-          <li>Improve code quality: remove PII from logs, fix style issues, clean up ESLint - by @ariel-rivo (#2148)</li>
+          <li>Improve code quality: remove PII from logs, fix style issues, clean up ESLint - by
+            @ariel-rivo (#2148)</li>
           <li>chore(deps): bump the npm_and_yarn group across 2 directories with 1 update (#2149)</li>
-          <li>Fix version references in Wayland troubleshooting documentation - by @ariel-rivo (#2150)</li>
+          <li>Fix version references in Wayland troubleshooting documentation - by @ariel-rivo
+            (#2150)</li>
           <li>Update roadmap for v2.7.4 release and v2.7.5 planning - by @ariel-rivo (#2153)</li>
           <li>Make Quick Chat feature opt-in via configuration - by @ariel-rivo (#2155)</li>
         </ul>
@@ -187,15 +235,21 @@
     <release version="2.7.4" date="2026-02-12">
       <description>
         <ul>
-          <li>feat: handle Microsoft Cloud App Security (MCAS) domain suffix in hostname validation - by @tvanderpool (#2101)</li>
-          <li>feat: Implement Quick Chat Access with People API and inline messaging (#2109) - by @ariel-rivo (#2119)</li>
+          <li>feat: handle Microsoft Cloud App Security (MCAS) domain suffix in hostname validation
+            - by @tvanderpool (#2101)</li>
+          <li>feat: Implement Quick Chat Access with People API and inline messaging (#2109) - by
+            @ariel-rivo (#2119)</li>
           <li>Add GitHub Issue Bot research and investigation document - by @ariel-rivo (#2126)</li>
-          <li>docs: Update roadmap for v2.7.4 release plan, archive logout indicator - by @ariel-rivo (#2133)</li>
-          <li>chore(deps): bump webpack from 5.101.3 to 5.105.0 in /docs-site in the npm_and_yarn group across 1 directory (#2134)</li>
+          <li>docs: Update roadmap for v2.7.4 release plan, archive logout indicator - by
+            @ariel-rivo (#2133)</li>
+          <li>chore(deps): bump webpack from 5.101.3 to 5.105.0 in /docs-site in the npm_and_yarn
+            group across 1 directory (#2134)</li>
           <li>Add GitHub Issue Triage Bot Phase 1 (Information Request) - by @ariel-rivo (#2135)</li>
           <li>Force X11 ozone platform by default on Linux - by @ariel-rivo (#2139)</li>
-          <li>docs: Migrate community chat links from Gitter to Matrix space (#2113) - by @ariel-rivo (#2141)</li>
-          <li>docs: add uninstall guide with instructions for all installation methods (#2048) - by @ariel-rivo (#2142)</li>
+          <li>docs: Migrate community chat links from Gitter to Matrix space (#2113) - by
+            @ariel-rivo (#2141)</li>
+          <li>docs: add uninstall guide with instructions for all installation methods (#2048) - by
+            @ariel-rivo (#2142)</li>
           <li>Update development roadmap for v2.7.4 release - by @ariel-rivo (#2145)</li>
         </ul>
       </description>
@@ -207,15 +261,19 @@
           <li>Replace clipboard monitoring with join meeting dialog - by @ariel-rivo (#2082)</li>
           <li>Fix AppImage extraction to work without execute permissions - by @ariel-rivo (#2102)</li>
           <li>Upgrade Playwright to v1.58.1 - by @ariel-rivo (#2103)</li>
-          <li>Convert window icon to nativeImage for proper Linux/KDE display - by @ariel-rivo (#2104)</li>
+          <li>Convert window icon to nativeImage for proper Linux/KDE display - by @ariel-rivo
+            (#2104)</li>
           <li>Update roadmap for v2.7.3 with current priorities and status - by @ariel-rivo (#2105)</li>
-          <li>Add chat API validation spikes for chat modal feasibility testing - by @ariel-rivo (#2111)</li>
+          <li>Add chat API validation spikes for chat modal feasibility testing - by @ariel-rivo
+            (#2111)</li>
           <li>docs: Add PII log removal research and implementation plan - by @ariel-rivo (#2114)</li>
           <li>feat: Add PII log sanitizer utility (Phase 1) - by @ariel-rivo (#2116)</li>
           <li>Upgrade dependencies: electron, electron-builder, and globals - by @ariel-rivo (#2117)</li>
           <li>feat: Integrate PII sanitizer with electron-log (Phase 2-5) (#2118)</li>
-          <li>docs: Update documentation for deprecated config options (#2120) - by @ariel-rivo (#2122)</li>
-          <li>Fix Outlook icon registration by expanding CSP CDN domain allowlist - by @ariel-rivo (#2123)</li>
+          <li>docs: Update documentation for deprecated config options (#2120) - by @ariel-rivo
+            (#2122)</li>
+          <li>Fix Outlook icon registration by expanding CSP CDN domain allowlist - by @ariel-rivo
+            (#2123)</li>
           <li>docs: Upgrade electron-store to 11.0.2 - by @ariel-rivo (#2124)</li>
           <li>Add last updated timestamp to release notes comment - by @ariel-rivo (#2125)</li>
           <li>Add enhanced release notes generation for release workflow - by @ariel-rivo (#2128)</li>
@@ -225,7 +283,8 @@
     <release version="2.7.2" date="2026-01-30">
       <description>
         <ul>
-          <li>fix(screenSharing): prevent SIGILL crash by using static thumbnails - by @bluvulture (#2089), @ariel-rivo (#2068)</li>
+          <li>fix(screenSharing): prevent SIGILL crash by using static thumbnails - by @bluvulture
+            (#2089), @ariel-rivo (#2068)</li>
           <li>Fix Intune SSO for Microsoft Identity Broker &gt; 2.0.1 - by @ariel-rivo (#2069)</li>
           <li>Fix tray icon rendering on Linux by always using nativeImage - by @ariel-rivo (#2096)</li>
           <li>Upgrade yargs to v18 and update dependencies - by @ariel-rivo (#2097)</li>
@@ -235,14 +294,20 @@
     <release version="2.7.1" date="2026-01-29">
       <description>
         <ul>
-          <li>Add AppImage update info to Linux builds for third-party managers - by @ariel-rivo (#2067)</li>
-          <li>Fix username matching for intune auth to not be case-sensitive - by @vizius-jps (#2076)</li>
+          <li>Add AppImage update info to Linux builds for third-party managers - by @ariel-rivo
+            (#2067)</li>
+          <li>Fix username matching for intune auth to not be case-sensitive - by @vizius-jps
+            (#2076)</li>
           <li>Add development roadmap and reorganize research documentation - by @ariel-rivo (#2079)</li>
-          <li>fix(ci): use unsquashfs for cross-architecture ARM AppImage extraction - by @ariel-rivo (#2080)</li>
+          <li>fix(ci): use unsquashfs for cross-architecture ARM AppImage extraction - by
+            @ariel-rivo (#2080)</li>
           <li>docs: Add GNOME Shell search provider investigation research - by @ariel-rivo (#2081)</li>
-          <li>Remove references to mqtt-commands-implementation research doc - by @ariel-rivo (#2083)</li>
-          <li>chore(deps): bump tar from 6.2.1 to 7.5.7 in the npm_and_yarn group across 1 directory (#2084)</li>
-          <li>Fix: update reference to core services due to upstream change (#2077) - by @bastidest (#2085)</li>
+          <li>Remove references to mqtt-commands-implementation research doc - by @ariel-rivo
+            (#2083)</li>
+          <li>chore(deps): bump tar from 6.2.1 to 7.5.7 in the npm_and_yarn group across 1 directory
+            (#2084)</li>
+          <li>Fix: update reference to core services due to upstream change (#2077) - by @bastidest
+            (#2085)</li>
         </ul>
       </description>
     </release>
@@ -254,14 +319,16 @@
           <li>docs: fix documentation inconsistencies across repository - by @ariel-rivo (#2030)</li>
           <li>fix: MQTT status stuck on do_not_disturb - by @ariel-rivo (#2032)</li>
           <li>chore(deps): bump the npm_and_yarn group across 2 directories with 1 update (#2034)</li>
-          <li>chore(deps): bump qs from 6.13.0 to 6.14.1 in /docs-site in the npm_and_yarn group across 1 directory (#2035)</li>
+          <li>chore(deps): bump qs from 6.13.0 to 6.14.1 in /docs-site in the npm_and_yarn group
+            across 1 directory (#2035)</li>
           <li>Fix Electron 39 snap permissions issue - by @ariel-rivo (#2040)</li>
           <li>Update dependencies for Electron 39 - by @ariel-rivo (#2045)</li>
           <li>Update default outlook link - by @XCroatoanX (#2046)</li>
           <li>ci: restore armv7l snap build - by @ariel-rivo (#2050)</li>
           <li>Fix SonarQube security issue in changelog workflow - by @ariel-rivo (#2051)</li>
           <li>Fix changelog generation for external repositories - by @ariel-rivo (#2052)</li>
-          <li>docs: update research documentation status and remove outdated files - by @ariel-rivo (#2053)</li>
+          <li>docs: update research documentation status and remove outdated files - by @ariel-rivo
+            (#2053)</li>
           <li>feat: add automated release preparation workflow - by @ariel-rivo (#2056)</li>
           <li>chore(deps): bump the npm_and_yarn group across 2 directories with 1 update (#2061)</li>
         </ul>
@@ -276,8 +343,10 @@
           <li>Implement MQTT Extended Status Phase 1a - by @ariel-rivo (#2007)</li>
           <li>Fix changelog generation triggering on every change - by @ariel-rivo (#2008)</li>
           <li>Make top bar elements clickable in frameless mode - by @KrissN (#2009)</li>
-          <li>chore(deps): bump mdast-util-to-hast from 13.2.0 to 13.2.1 in /docs-site in the npm_and_yarn group across 1 directory (#2012)</li>
-          <li>[Research]: Disable camera and microphone when screen is locked (#2015) - by @ariel-rivo (#2018)</li>
+          <li>chore(deps): bump mdast-util-to-hast from 13.2.0 to 13.2.1 in /docs-site in the
+            npm_and_yarn group across 1 directory (#2012)</li>
+          <li>[Research]: Disable camera and microphone when screen is locked (#2015) - by
+            @ariel-rivo (#2018)</li>
           <li>Investigate Open Login Dialog in the browser #2017 - by @ariel-rivo (#2019)</li>
           <li>chore: cleanup obsolete tasks folder and consolidate docs - by @ariel-rivo (#2022)</li>
         </ul>
@@ -289,9 +358,11 @@
           <li>[Research]: Review and improve project configuration options - by @ariel-rivo (#1937)</li>
           <li>Display research docs in side panel - by @ariel-rivo (#1993)</li>
           <li>Implement issue 1991 with simple approach - by @ariel-rivo (#1994)</li>
-          <li>chore(deps): bump node-forge from 1.3.1 to 1.3.2 in /docs-site in the npm_and_yarn group across 1 directory (#1996)</li>
+          <li>chore(deps): bump node-forge from 1.3.1 to 1.3.2 in /docs-site in the npm_and_yarn
+            group across 1 directory (#1996)</li>
           <li>Change raise-hand command to toggle-hand-raise - by @ariel-rivo (#1997)</li>
-          <li>Remove [skip ci] from changelog generator to enable PR merging  - by @ariel-rivo (#1998)</li>
+          <li>Remove [skip ci] from changelog generator to enable PR merging - by @ariel-rivo
+            (#1998)</li>
           <li>Update metadata for com.github.ariel-rivo.outlook_for_linux - by @razzeee (#1999)</li>
           <li>Add menu toggle for badge count notification setting - by @ariel-rivo (#2000)</li>
           <li>Add calendar export research for issue #1995 - by @ariel-rivo (#2001)</li>
@@ -301,8 +372,10 @@
     <release version="2.6.17" date="2025-11-26">
       <description>
         <ul>
-          <li>[Research]: Explore solutions MQTT Publish camera, microphone and in-call state - by @ariel-rivo (#1941)</li>
-          <li>[Research]: Evaluate adding command line arguments, bundle an mqtt server and supporting commands/actions in our mqtt implementation - by @ariel-rivo (#1956)</li>
+          <li>[Research]: Explore solutions MQTT Publish camera, microphone and in-call state - by
+            @ariel-rivo (#1941)</li>
+          <li>[Research]: Evaluate adding command line arguments, bundle an mqtt server and
+            supporting commands/actions in our mqtt implementation - by @ariel-rivo (#1956)</li>
           <li>[Research]: Graph API integration - by @ariel-rivo (#1958)</li>
           <li>Add custom notification system to docs - by @ariel-rivo (#1981)</li>
           <li>Update notification system research documentation - by @ariel-rivo (#1982)</li>
@@ -319,7 +392,8 @@
           <li>[Research]: Build notification modal component - by @ariel-rivo (#1935)</li>
           <li>[Research]: Consolidate project documentation and ADRs - by @ariel-rivo (#1957)</li>
           <li>Refactor index.js partitions and idle state of #1960 - by @ariel-rivo (#1968)</li>
-          <li>[Docs] Update Incremental Refactoring Plan - Phase 1 Complete &amp; Phase 2 Reassessment - by @ariel-rivo (#1970)</li>
+          <li>[Docs] Update Incremental Refactoring Plan - Phase 1 Complete &amp; Phase 2
+            Reassessment - by @ariel-rivo (#1970)</li>
           <li>Continue incremental refactoring implementation - by @ariel-rivo (#1971)</li>
           <li>documentation improvements - by @ariel-rivo (#1974)</li>
           <li>Review and reduce duplication in development docs - by @ariel-rivo (#1975)</li>
@@ -331,47 +405,70 @@
     <release version="2.6.15" date="2025-11-17">
       <description>
         <ul>
-          <li>Add AI-powered changelog system to decouple merging from releasing - by @ariel-rivo (#1951)</li>
-          <li>[Refactor]: Extract notification functions from app/index.js - part of #1960 - by @ariel-rivo (#1962)</li>
+          <li>Add AI-powered changelog system to decouple merging from releasing - by @ariel-rivo
+            (#1951)</li>
+          <li>[Refactor]: Extract notification functions from app/index.js - part of #1960 - by
+            @ariel-rivo (#1962)</li>
           <li>Continue refactoring epic work of #1960 - by @ariel-rivo (#1966)</li>
-          <li>chore(deps): bump js-yaml from 3.14.1 to 3.14.2 in /docs-site in the npm_and_yarn group across 1 directory (#1967)</li>
-          <li>Update: Electron 37.10.0 and electron-builder 26.2.0 for latest bug fixes and improvements</li>
+          <li>chore(deps): bump js-yaml from 3.14.1 to 3.14.2 in /docs-site in the npm_and_yarn
+            group across 1 directory (#1967)</li>
+          <li>Update: Electron 37.10.0 and electron-builder 26.2.0 for latest bug fixes and
+            improvements</li>
         </ul>
       </description>
     </release>
     <release version="2.6.14" date="2025-11-16">
       <description>
         <ul>
-          <li>Refactor: Extract command line switch management into dedicated startup module - reduces app/index.js by 96 lines (12.8%) with improved code organization (Week 1 of incremental refactoring plan)</li>
-          <li>Feature: Enable PR artifact downloads - pre-built binaries now automatically uploaded to pull requests for easier testing without building from source (#1952)</li>
-          <li>Documentation: Consolidate AI agent instruction files - eliminate 28% content duplication by establishing single source of truth for markdown standards and using reference-based approach across CLAUDE.md, copilot-instructions.md, and workflow instruction files</li>
+          <li>Refactor: Extract command line switch management into dedicated startup module -
+            reduces app/index.js by 96 lines (12.8%) with improved code organization (Week 1 of
+            incremental refactoring plan)</li>
+          <li>Feature: Enable PR artifact downloads - pre-built binaries now automatically uploaded
+            to pull requests for easier testing without building from source (#1952)</li>
+          <li>Documentation: Consolidate AI agent instruction files - eliminate 28% content
+            duplication by establishing single source of truth for markdown standards and using
+            reference-based approach across CLAUDE.md, copilot-instructions.md, and workflow
+            instruction files</li>
         </ul>
       </description>
     </release>
     <release version="2.6.13" date="2025-11-12">
       <description>
         <ul>
-          <li>Update: Electron upgraded to 37.9.0, ESLint to 9.39.1, and globals to 16.5.0 for latest bug fixes and improvements</li>
-          <li>Refactor: Remove excessive comments from feature flag handling functions for improved code clarity</li>
-          <li>Feature: Add automated PR binary artifact uploads for all platforms - contributors and testers can now download pre-built packages directly from GitHub Actions to test PR changes without building from source (closes #1940)</li>
-          <li>Documentation: Streamline CONTRIBUTING.md to be a quick reference guide with links to comprehensive Docusaurus documentation</li>
-          <li>Research: Complete architecture modernization analysis - comprehensive research revealing that the codebase is well-structured with 49% of index.js extractable through low-risk incremental refactoring instead of large-scale architectural overhaul (supersedes #1799 DDD+Plugin approach)</li>
+          <li>Update: Electron upgraded to 37.9.0, ESLint to 9.39.1, and globals to 16.5.0 for
+            latest bug fixes and improvements</li>
+          <li>Refactor: Remove excessive comments from feature flag handling functions for improved
+            code clarity</li>
+          <li>Feature: Add automated PR binary artifact uploads for all platforms - contributors and
+            testers can now download pre-built packages directly from GitHub Actions to test PR
+            changes without building from source (closes #1940)</li>
+          <li>Documentation: Streamline CONTRIBUTING.md to be a quick reference guide with links to
+            comprehensive Docusaurus documentation</li>
+          <li>Research: Complete architecture modernization analysis - comprehensive research
+            revealing that the codebase is well-structured with 49% of index.js extractable through
+            low-risk incremental refactoring instead of large-scale architectural overhaul
+            (supersedes #1799 DDD+Plugin approach)</li>
         </ul>
       </description>
     </release>
     <release version="2.6.12" date="2025-11-07">
       <description>
         <ul>
-          <li>Feature: Add MQTT integration for Outlook status publishing - implemented by @Donnyp751 (closes #1791)</li>
+          <li>Feature: Add MQTT integration for Outlook status publishing - implemented by
+            @Donnyp751 (closes #1791)</li>
         </ul>
       </description>
     </release>
     <release version="2.6.11" date="2025-11-06">
       <description>
         <ul>
-          <li>Fix: Revert notification behavior to v2.2.1 pattern to fix "notifications only work once" issue - v2.6.8 async refactoring broke notification return value, preventing Outlook from managing notification lifecycle (issue #1921)</li>
-          <li>Feature: Add GPU info debug window accessible from Debug menu - displays chrome://gpu information for diagnosing graphics and hardware acceleration issues</li>
-          <li>Feature: Add configurable global keyboard shortcuts that work system-wide - allows Outlook shortcuts to work even when app is not focused (opt-in, disabled by default)</li>
+          <li>Fix: Revert notification behavior to v2.2.1 pattern to fix "notifications only work
+            once" issue - v2.6.8 async refactoring broke notification return value, preventing
+            Outlook from managing notification lifecycle (issue #1921)</li>
+          <li>Feature: Add GPU info debug window accessible from Debug menu - displays chrome://gpu
+            information for diagnosing graphics and hardware acceleration issues</li>
+          <li>Feature: Add configurable global keyboard shortcuts that work system-wide - allows
+            Outlook shortcuts to work even when app is not focused (opt-in, disabled by default)</li>
         </ul>
       </description>
     </release>
@@ -386,22 +483,26 @@
     <release version="2.6.9" date="2025-11-02">
       <description>
         <ul>
-          <li>Feature: Support short form Outlook URLs (e.g., /meet/) with simplified single regex configuration</li>
-          <li>Feature: Add back/forward navigation buttons to Outlook UI - browser-style navigation controls positioned in titlebar</li>
+          <li>Feature: Support short form Outlook URLs (e.g., /meet/) with simplified single regex
+            configuration</li>
+          <li>Feature: Add back/forward navigation buttons to Outlook UI - browser-style navigation
+            controls positioned in titlebar</li>
         </ul>
       </description>
     </release>
     <release version="2.6.8" date="2025-10-31">
       <description>
         <ul>
-          <li>Fix: Restore notification auto-close behavior on Ubuntu by re-integrating CustomNotification wrapper that sets requireInteraction: false (issue #1888)</li>
+          <li>Fix: Restore notification auto-close behavior on Ubuntu by re-integrating
+            CustomNotification wrapper that sets requireInteraction: false (issue #1888)</li>
         </ul>
       </description>
     </release>
     <release version="2.6.7" date="2025-10-30">
       <description>
         <ul>
-          <li>Feature: Respect user's disableGpu configuration on Wayland - users can now explicitly enable GPU acceleration via config file or CLI argument (issue #1890)</li>
+          <li>Feature: Respect user's disableGpu configuration on Wayland - users can now explicitly
+            enable GPU acceleration via config file or CLI argument (issue #1890)</li>
         </ul>
       </description>
     </release>
@@ -409,8 +510,10 @@
       <description>
         <ul>
           <li>Feature: Add in-app documentation viewer accessible from Help menu</li>
-          <li>Fix: Restore trayIconRenderer ipcRenderer initialization that was accidentally reverted (issue #1902)</li>
-          <li>Fix: Narrow screen share detection to prevent audio being disabled in regular calls - fixes mute/unmute workaround requirement (issues #1896, #1871)</li>
+          <li>Fix: Restore trayIconRenderer ipcRenderer initialization that was accidentally
+            reverted (issue #1902)</li>
+          <li>Fix: Narrow screen share detection to prevent audio being disabled in regular calls -
+            fixes mute/unmute workaround requirement (issues #1896, #1871)</li>
         </ul>
       </description>
     </release>
@@ -419,17 +522,22 @@
         <ul>
           <li>Update: Electron upgraded to 37.7.1 for latest security patches and bug fixes</li>
           <li>CI/CD: Parallelize E2E tests with builds for ~40% faster CI/CD pipeline execution</li>
-          <li>Security: Pin all GitHub Actions to commit SHAs to prevent supply chain attacks and update actions to latest versions</li>
-          <li>Code Cleanup: Removed ~70 lines of debug/test code from reactHandler.js - removed React version detection, globalThis debug exposure, and verbose logging</li>
+          <li>Security: Pin all GitHub Actions to commit SHAs to prevent supply chain attacks and
+            update actions to latest versions</li>
+          <li>Code Cleanup: Removed ~70 lines of debug/test code from reactHandler.js - removed
+            React version detection, globalThis debug exposure, and verbose logging</li>
         </ul>
       </description>
     </release>
     <release version="2.6.4" date="2025-10-22">
       <description>
         <ul>
-          <li>Fix: Cache management now disabled by default based on user feedback - can still be manually enabled if needed (issues #1868, #1840)</li>
-          <li>Fix: Screen sharing selector X button no longer shows TypeError when canceling - graceful error handling implemented (issue #1889)</li>
-          <li>Fix: Preview window now closes automatically when meeting ends - detects when stop sharing button disappears from DOM (issue #1870)</li>
+          <li>Fix: Cache management now disabled by default based on user feedback - can still be
+            manually enabled if needed (issues #1868, #1840)</li>
+          <li>Fix: Screen sharing selector X button no longer shows TypeError when canceling -
+            graceful error handling implemented (issue #1889)</li>
+          <li>Fix: Preview window now closes automatically when meeting ends - detects when stop
+            sharing button disappears from DOM (issue #1870)</li>
           <li>Docs: Add Recall.ai sponsorship section to README</li>
         </ul>
       </description>
@@ -437,47 +545,64 @@
     <release version="2.6.3" date="2025-10-21">
       <description>
         <ul>
-          <li>Fix: Prevent infinite loop on rapid network changes from Docker - resolves critical system freeze issue caused by Docker container restarts</li>
-          <li>Fix: Implement debouncing mechanism (1s delay) for network refresh operations to handle rapid network change events gracefully</li>
-          <li>Fix: Add concurrent refresh prevention flag to avoid overlapping network test operations that could saturate system resources</li>
-          <li>Fix: Proper event listener cleanup to prevent memory leaks when ConnectionManager is restarted</li>
-          <li>Enhancement: Add start:dev npm script with --no-sandbox flag for easier development testing</li>
-          <li>Fix: Revert to core22 and Electron 37.7.0 for snap compatibility - electron-builder doesn't support core24 yet (issue #8548)</li>
-          <li>Documentation: Add comprehensive MQTT integration documentation with configuration guide, troubleshooting, and home automation examples</li>
+          <li>Fix: Prevent infinite loop on rapid network changes from Docker - resolves critical
+            system freeze issue caused by Docker container restarts</li>
+          <li>Fix: Implement debouncing mechanism (1s delay) for network refresh operations to
+            handle rapid network change events gracefully</li>
+          <li>Fix: Add concurrent refresh prevention flag to avoid overlapping network test
+            operations that could saturate system resources</li>
+          <li>Fix: Proper event listener cleanup to prevent memory leaks when ConnectionManager is
+            restarted</li>
+          <li>Enhancement: Add start:dev npm script with --no-sandbox flag for easier development
+            testing</li>
+          <li>Fix: Revert to core22 and Electron 37.7.0 for snap compatibility - electron-builder
+            doesn't support core24 yet (issue #8548)</li>
+          <li>Documentation: Add comprehensive MQTT integration documentation with configuration
+            guide, troubleshooting, and home automation examples</li>
         </ul>
       </description>
     </release>
     <release version="2.6.2" date="2025-01-21">
       <description>
         <ul>
-          <li>Fix: Upgrade snap base from core22 to core24 to resolve LIBDBUS_PRIVATE_1.12.20 startup crash with Electron 38</li>
+          <li>Fix: Upgrade snap base from core22 to core24 to resolve LIBDBUS_PRIVATE_1.12.20
+            startup crash with Electron 38</li>
         </ul>
       </description>
     </release>
     <release version="2.6.1" date="2025-01-20">
       <description>
         <ul>
-          <li>Feature: Add automated E2E testing infrastructure using Playwright - smoke tests validate app launch and Microsoft login redirect</li>
-          <li>CI/CD: Integrate E2E tests into GitHub Actions workflow - all builds now depend on tests passing</li>
+          <li>Feature: Add automated E2E testing infrastructure using Playwright - smoke tests
+            validate app launch and Microsoft login redirect</li>
+          <li>CI/CD: Integrate E2E tests into GitHub Actions workflow - all builds now depend on
+            tests passing</li>
         </ul>
       </description>
     </release>
     <release version="2.6.0" date="2025-10-19">
       <description>
         <ul>
-          <li>Major: Upgrade Electron from 37.6.0 to 38.3.0 with Chromium 140, Node.js 22, improved Wayland support - macOS 12+ now required</li>
-          <li>Enhancement: Modernize screen sharing with native private fields, fix IPC listener memory leak and race conditions - improves reliability</li>
-          <li>Update: ESLint upgraded to 9.38.0 and electron-builder to 26.1.0 for latest bug fixes and improvements</li>
-          <li>Documentation: Overall review of the documentation to add missing links and re-ordering of some areas</li>
-          <li>Documentation: Upgrade Docusaurus dependencies and fix search functionality for improved documentation experience</li>
+          <li>Major: Upgrade Electron from 37.6.0 to 38.3.0 with Chromium 140, Node.js 22, improved
+            Wayland support - macOS 12+ now required</li>
+          <li>Enhancement: Modernize screen sharing with native private fields, fix IPC listener
+            memory leak and race conditions - improves reliability</li>
+          <li>Update: ESLint upgraded to 9.38.0 and electron-builder to 26.1.0 for latest bug fixes
+            and improvements</li>
+          <li>Documentation: Overall review of the documentation to add missing links and
+            re-ordering of some areas</li>
+          <li>Documentation: Upgrade Docusaurus dependencies and fix search functionality for
+            improved documentation experience</li>
         </ul>
       </description>
     </release>
     <release version="2.5.13" date="2025-10-08">
       <description>
         <ul>
-          <li>Fix: Wayland screenshare preview window now works correctly by using desktopCapturer source ID format (screen:x:y) instead of MediaStream UUIDs</li>
-          <li>Fix: Correct snap workflow arm64 build command typo (armv64 -&gt; arm64) that prevented arm64 snap releases</li>
+          <li>Fix: Wayland screenshare preview window now works correctly by using desktopCapturer
+            source ID format (screen:x:y) instead of MediaStream UUIDs</li>
+          <li>Fix: Correct snap workflow arm64 build command typo (armv64 -&gt; arm64) that
+            prevented arm64 snap releases</li>
         </ul>
       </description>
     </release>
@@ -491,93 +616,121 @@
     <release version="2.5.11" date="2025-10-03">
       <description>
         <ul>
-          <li>Feature: Add a new tray menu entry to join a outlook meeting from a copied URL in the clipboard</li>
+          <li>Feature: Add a new tray menu entry to join a outlook meeting from a copied URL in the
+            clipboard</li>
         </ul>
       </description>
     </release>
     <release version="2.5.10" date="2025-10-02">
       <description>
         <ul>
-          <li>Attempt: Disable all audio in screen sharing to try to fix issue #1800 - might fix audio echo on Wayland/Pipewire</li>
-          <li>Update: Electron updated to 37.6.0, ESLint to 9.36.0 for latest security patches and bug fixes</li>
+          <li>Attempt: Disable all audio in screen sharing to try to fix issue #1800 - might fix
+            audio echo on Wayland/Pipewire</li>
+          <li>Update: Electron updated to 37.6.0, ESLint to 9.36.0 for latest security patches and
+            bug fixes</li>
         </ul>
       </description>
     </release>
     <release version="2.5.9" date="2025-09-19">
       <description>
         <ul>
-          <li>Feature: Implement secure token cache storage using Electron safeStorage API - tokens are now encrypted using OS-level security (Keychain/DPAPI/kwallet) instead of plain localStorage</li>
-          <li>Enhancement: Increase default cache size limit from 300MB to 600MB to reduce frequency of automatic cache cleanup</li>
-          <li>Fix: Resolve disableAutogain initialization failure that prevented microphone auto-gain control from being disabled properly</li>
+          <li>Feature: Implement secure token cache storage using Electron safeStorage API - tokens
+            are now encrypted using OS-level security (Keychain/DPAPI/kwallet) instead of plain
+            localStorage</li>
+          <li>Enhancement: Increase default cache size limit from 300MB to 600MB to reduce frequency
+            of automatic cache cleanup</li>
+          <li>Fix: Resolve disableAutogain initialization failure that prevented microphone
+            auto-gain control from being disabled properly</li>
         </ul>
       </description>
     </release>
     <release version="2.5.8" date="2025-09-19">
       <description>
         <ul>
-          <li>Restore: Re-enable disableAutogain functionality that was removed in v2.3.0 - allows manual control over microphone auto-gain for professional audio setups</li>
+          <li>Restore: Re-enable disableAutogain functionality that was removed in v2.3.0 - allows
+            manual control over microphone auto-gain for professional audio setups</li>
         </ul>
       </description>
     </release>
     <release version="2.5.7" date="2025-09-18">
       <description>
         <ul>
-          <li>Fix: Restore tray icon badge count functionality that was missing since v2.3.0 - properly initialize TrayIconRenderer module in preload script</li>
+          <li>Fix: Restore tray icon badge count functionality that was missing since v2.3.0 -
+            properly initialize TrayIconRenderer module in preload script</li>
         </ul>
       </description>
     </release>
     <release version="2.5.6" date="2025-09-15">
       <description>
         <ul>
-          <li>Fix: Ensure microsoft-identity-broker is started before use, allowing SSO to work more reliability</li>
+          <li>Fix: Ensure microsoft-identity-broker is started before use, allowing SSO to work more
+            reliability</li>
         </ul>
       </description>
     </release>
     <release version="2.5.5" date="2025-09-15">
       <description>
         <ul>
-          <li>Fix: Resolve missing screen-sharing-started IPC handler that could cause screen sharing session tracking issues</li>
-          <li>Enhancement: Add comprehensive tray icon diagnostic logging with [TRAY_DIAG] tags to help troubleshoot notification timing and performance issues</li>
-          <li>Enhancement: Add detailed screen sharing echo diagnostics with audio track analysis and duplicate session detection</li>
-          <li>Enhancement: Add extensive Intune SSO diagnostic logging with troubleshooting guidance for D-Bus and Identity Broker issues</li>
-          <li>Documentation: Add comprehensive Intune SSO documentation with troubleshooting guidance for enterprise environments</li>
-          <li>Documentation: Refactor Intune integration documentation to separate developer vs user content</li>
-          <li>Documentation: Update RPM installation instructions to use modern dnf commands with proper sudo usage</li>
-          <li>Update: Electron updated to 37.4.0 and electron-builder to 26.0.20 with latest security patches</li>
+          <li>Fix: Resolve missing screen-sharing-started IPC handler that could cause screen
+            sharing session tracking issues</li>
+          <li>Enhancement: Add comprehensive tray icon diagnostic logging with [TRAY_DIAG] tags to
+            help troubleshoot notification timing and performance issues</li>
+          <li>Enhancement: Add detailed screen sharing echo diagnostics with audio track analysis
+            and duplicate session detection</li>
+          <li>Enhancement: Add extensive Intune SSO diagnostic logging with troubleshooting guidance
+            for D-Bus and Identity Broker issues</li>
+          <li>Documentation: Add comprehensive Intune SSO documentation with troubleshooting
+            guidance for enterprise environments</li>
+          <li>Documentation: Refactor Intune integration documentation to separate developer vs user
+            content</li>
+          <li>Documentation: Update RPM installation instructions to use modern dnf commands with
+            proper sudo usage</li>
+          <li>Update: Electron updated to 37.4.0 and electron-builder to 26.0.20 with latest
+            security patches</li>
         </ul>
       </description>
     </release>
     <release version="2.5.4" date="2025-09-06">
       <description>
         <ul>
-          <li>Fix: Reactions bar no longer shows an unintended set of reactions above the bar due to GPU composition on Wayland systems.</li>
+          <li>Fix: Reactions bar no longer shows an unintended set of reactions above the bar due to
+            GPU composition on Wayland systems.</li>
         </ul>
       </description>
     </release>
     <release version="2.5.3" date="2025-09-03">
       <description>
         <ul>
-          <li>Fix: Implement token cache bridge to resolve authentication refresh issues - provides missing _tokenCache interface to Outlook authentication provider</li>
-          <li>Enhancement: Add comprehensive diagnostic logging for authentication refresh issues to help diagnose persistent "Please sign in again" problems</li>
-          <li>Enhancement: Add detailed screen sharing audio duplication logging to identify echo issues and multiple session creation</li>
+          <li>Fix: Implement token cache bridge to resolve authentication refresh issues - provides
+            missing _tokenCache interface to Outlook authentication provider</li>
+          <li>Enhancement: Add comprehensive diagnostic logging for authentication refresh issues to
+            help diagnose persistent "Please sign in again" problems</li>
+          <li>Enhancement: Add detailed screen sharing audio duplication logging to identify echo
+            issues and multiple session creation</li>
         </ul>
       </description>
     </release>
     <release version="2.5.2" date="2025-09-02">
       <description>
         <ul>
-          <li>Fix: Restore DOM access functionality by disabling contextIsolation and sandbox for Outlook browser integration</li>
-          <li>Security: Implement comprehensive compensating controls including Content Security Policy headers and IPC channel validation</li>
-          <li>Enhancement: Add React version detection to monitor for breaking changes in React 19+ timeline</li>
-          <li>Changed from --webDebug --logConfig='{}' to ELECTRON_ENABLE_LOGGING=true outlook-for-linux --logConfig='{}'</li>
-          <li>Fix: Revert audio channel disabling in screen sharing as it doesn't resolve echo issues</li>
+          <li>Fix: Restore DOM access functionality by disabling contextIsolation and sandbox for
+            Outlook browser integration</li>
+          <li>Security: Implement comprehensive compensating controls including Content Security
+            Policy headers and IPC channel validation</li>
+          <li>Enhancement: Add React version detection to monitor for breaking changes in React 19+
+            timeline</li>
+          <li>Changed from --webDebug --logConfig='{}' to ELECTRON_ENABLE_LOGGING=true
+            outlook-for-linux --logConfig='{}'</li>
+          <li>Fix: Revert audio channel disabling in screen sharing as it doesn't resolve echo
+            issues</li>
         </ul>
       </description>
     </release>
     <release version="2.5.1" date="2025-08-26">
       <description>
         <ul>
-          <li>Fix: Attempt to address screen sharing audio echo by preventing audio channel creation during screen sharing</li>
+          <li>Fix: Attempt to address screen sharing audio echo by preventing audio channel creation
+            during screen sharing</li>
           <li>Update: Electron updated to 37.3.1 with latest security patches</li>
           <li>Update: ESLint and related dependencies updated to latest versions</li>
         </ul>
@@ -586,10 +739,14 @@
     <release version="2.5.0" date="2025-08-18">
       <description>
         <ul>
-          <li>Major: Complete documentation platform migration to Docusaurus with modern search and mobile-first design</li>
-          <li>Fix: Cache manager now preserves authentication tokens. This might prevent 24-hour forced re-authentication cycles. Might fix #1357</li>
-          <li>Fix: macOS dock icon now displays correctly with proper 128x128 minimum size requirement and fallback resizing</li>
-          <li>Fix: preload browser scripts now correctly handle context isolation. Might fix #1789 and #1795</li>
+          <li>Major: Complete documentation platform migration to Docusaurus with modern search and
+            mobile-first design</li>
+          <li>Fix: Cache manager now preserves authentication tokens. This might prevent 24-hour
+            forced re-authentication cycles. Might fix #1357</li>
+          <li>Fix: macOS dock icon now displays correctly with proper 128x128 minimum size
+            requirement and fallback resizing</li>
+          <li>Fix: preload browser scripts now correctly handle context isolation. Might fix #1789
+            and #1795</li>
         </ul>
       </description>
     </release>
@@ -609,7 +766,8 @@
         <ul>
           <li>New: Improved screen sharing with enhanced contextIsolation and sandbox support</li>
           <li>Improvement: Comprehensive documentation restructuring and simplification</li>
-          <li>Cleanup: Removed obsolete configuration options (contextIsolation, sandbox, disableAutogain)</li>
+          <li>Cleanup: Removed obsolete configuration options (contextIsolation, sandbox,
+            disableAutogain)</li>
           <li>Remove the inAppUi as it is not needed at the moment</li>
         </ul>
       </description>
@@ -626,10 +784,11 @@
         <ul>
           <li>New: Implemented control for in-app UI window visibility via configuration.</li>
           <li>New: Enhanced screen sharing pop-out window (Closes #1538):</li>
-          <li>  • Displays shared screen content.</li>
-          <li>  • Ensures only a single pop-out window instance.</li>
-          <li>  • Closes automatically when screen sharing stops.</li>
-          <li>Added system-wide configuration support at /etc/outlook-for-linux/config.json for enterprise deployments (Closes #1773)</li>
+          <li> • Displays shared screen content.</li>
+          <li> • Ensures only a single pop-out window instance.</li>
+          <li> • Closes automatically when screen sharing stops.</li>
+          <li>Added system-wide configuration support at /etc/outlook-for-linux/config.json for
+            enterprise deployments (Closes #1773)</li>
           <li>Enabling by default the cache management solution implemented in #1765</li>
           <li>Internal: Added CLAUDE.md for Claude-specific instructions.</li>
           <li>Internal: Added new task list files for project management.</li>
@@ -639,7 +798,8 @@
     <release version="2.1.4" date="2025-08-04">
       <description>
         <ul>
-          <li>Add msOutlookProtocols config option to handle v1 and v2 Outlook protocol links, and adding messages</li>
+          <li>Add msOutlookProtocols config option to handle v1 and v2 Outlook protocol links, and
+            adding messages</li>
         </ul>
       </description>
     </release>
@@ -647,7 +807,8 @@
       <description>
         <ul>
           <li>Documentation improvements</li>
-          <li>Created future prds and ai research documents for documentation-health and ui-system-strategic-analysis</li>
+          <li>Created future prds and ai research documents for documentation-health and
+            ui-system-strategic-analysis</li>
         </ul>
       </description>
     </release>
@@ -661,17 +822,21 @@
     <release version="2.1.1" date="2025-07-26">
       <description>
         <ul>
-          <li>Add configurable cache management to prevent daily logout issues (Issue #1756) - disabled by default, enable with config option</li>
+          <li>Add configurable cache management to prevent daily logout issues (Issue #1756) -
+            disabled by default, enable with config option</li>
           <li>Add proper Debian changelog generation for package managers (Issue #1691)</li>
           <li>Enhance build process with upstream changelog support for deb and rpm packages</li>
           <li>Update Electron from 37.2.0 to 37.2.4 with major stability improvements:</li>
-          <li>  • Fixed window close callback crashes that caused unexpected app termination (addresses Issue #1757)</li>
-          <li>  • Enhanced desktop capture with reduced crashes and better screen sharing quality (addresses Issues #1762, #1743, #1715)</li>
-          <li>  • Improved window management and resizing functionality (addresses Issue #1736)</li>
-          <li>  • Updated Chromium to 138.0.7204.157 for security and performance improvements</li>
-          <li>  • Better Linux desktop environment compatibility and PipeWire integration</li>
+          <li> • Fixed window close callback crashes that caused unexpected app termination
+            (addresses Issue #1757)</li>
+          <li> • Enhanced desktop capture with reduced crashes and better screen sharing quality
+            (addresses Issues #1762, #1743, #1715)</li>
+          <li> • Improved window management and resizing functionality (addresses Issue #1736)</li>
+          <li> • Updated Chromium to 138.0.7204.157 for security and performance improvements</li>
+          <li> • Better Linux desktop environment compatibility and PipeWire integration</li>
           <li>Update @homebridge/dbus-native to 0.7.2 for improved ARM compatibility</li>
-          <li>Update ESLint to 9.32.0 and electron-builder to 26.0.19 for better development experience</li>
+          <li>Update ESLint to 9.32.0 and electron-builder to 26.0.19 for better development
+            experience</li>
         </ul>
       </description>
     </release>
@@ -698,8 +863,10 @@
     <release version="2.0.17" date="2025-06-15">
       <description>
         <ul>
-          <li>Update electron to 36.4.0 and @homebridge/dbus-native to 0.7.1 for improved ARM compatibility and security</li>
-          <li>Adding release info generation from com.github.ariel-rivo.outlook_for_linux.appdata.xml file</li>
+          <li>Update electron to 36.4.0 and @homebridge/dbus-native to 0.7.1 for improved ARM
+            compatibility and security</li>
+          <li>Adding release info generation from
+            com.github.ariel-rivo.outlook_for_linux.appdata.xml file</li>
           <li>Validate the release version is ready on the build.yml github action</li>
           <li>Updating github actions to use node 22</li>
         </ul>
@@ -709,7 +876,8 @@
       <description>
         <ul>
           <li>Added a reimplementation of the call events to revive the incoming call scripts</li>
-          <li>Added an incoming call toast just like the one from the discontinued Linux Outlook App from Microsoft</li>
+          <li>Added an incoming call toast just like the one from the discontinued Linux Outlook App
+            from Microsoft</li>
         </ul>
       </description>
     </release>
@@ -723,7 +891,8 @@
     <release version="2.0.14" date="2025-05-20">
       <description>
         <ul>
-          <li>Adding --videoMenu option to enable a menu section which contains options to manipulate video elements (enable video controls, enter picture-in-picture mode)</li>
+          <li>Adding --videoMenu option to enable a menu section which contains options to
+            manipulate video elements (enable video controls, enter picture-in-picture mode)</li>
         </ul>
       </description>
     </release>
@@ -745,7 +914,8 @@
     <release version="2.0.11" date="2025-04-25">
       <description>
         <ul>
-          <li>Removing using the appTitle to setup the app name introduced in the previous version, as that breaks the icon in linux systems</li>
+          <li>Removing using the appTitle to setup the app name introduced in the previous version,
+            as that breaks the icon in linux systems</li>
           <li>Update electron to 35.2.1</li>
         </ul>
       </description>
@@ -762,8 +932,10 @@
       <description>
         <ul>
           <li>Remove disableMeetingNotifications as it is not possible anymore</li>
-          <li>Removing the incomingCallCommand and incomingCallCommandArgs as they are not working anymore</li>
-          <li>Removing ntlmV2enabled as it is not documented anymore in Chromium and it should be the default value</li>
+          <li>Removing the incomingCallCommand and incomingCallCommandArgs as they are not working
+            anymore</li>
+          <li>Removing ntlmV2enabled as it is not documented anymore in Chromium and it should be
+            the default value</li>
           <li>Removing deprecated `clearStorage` in favor of `clearStorageData`</li>
           <li>Removing deprecated `customUserDir` in favor of `--user-data-dir`</li>
           <li>Changing the default value of `onNewWindowOpenMeetupJoinUrlInApp` to `true`</li>
@@ -781,7 +953,8 @@
     <release version="2.0.7" date="2025-04-09">
       <description>
         <ul>
-          <li>Improving documentation by adding font square characters info fix in the KNOWN_ISSUES section</li>
+          <li>Improving documentation by adding font square characters info fix in the KNOWN_ISSUES
+            section</li>
           <li>Adding information on how to run multiple instances in the app</li>
           <li>Reshaping the config README file for easier reading</li>
         </ul>
@@ -790,7 +963,8 @@
     <release version="2.0.6" date="2025-04-08">
       <description>
         <ul>
-          <li>Fix 1379 allow option for links in offline meetings to open in the app. The config option called onNewWindowOpenMeetupJoinUrlInApp and defaults to false</li>
+          <li>Fix 1379 allow option for links in offline meetings to open in the app. The config
+            option called onNewWindowOpenMeetupJoinUrlInApp and defaults to false</li>
         </ul>
       </description>
     </release>
@@ -813,7 +987,8 @@
     <release version="2.0.3" date="2025-04-05">
       <description>
         <ul>
-          <li>Fix the appdata file typo in version 1.14.2, and fixing warnings for appstream-screenshot-missing-caption</li>
+          <li>Fix the appdata file typo in version 1.14.2, and fixing warnings for
+            appstream-screenshot-missing-caption</li>
           <li>Some formatting and minor improvements to the README/HISTORY/KNWON_ISSUES md files</li>
         </ul>
       </description>
@@ -836,10 +1011,13 @@
     <release version="2.0.0" date="2025-02-08">
       <description>
         <ul>
-          <li>Remove deprecated config enableBackgroundCallsAuthentication that was never announced but people didn't complain about</li>
-          <li>optInOutlookV2 and customBGServiceIgnoreMSDefaults config options are no longer available as they where outlook-v1 specific</li>
+          <li>Remove deprecated config enableBackgroundCallsAuthentication that was never announced
+            but people didn't complain about</li>
+          <li>optInOutlookV2 and customBGServiceIgnoreMSDefaults config options are no longer
+            available as they where outlook-v1 specific</li>
           <li>Cleaning up outlook-v1 logic in the app</li>
-          <li>Set default url to be https://outlook.microsoft.com/v2 instead of https://outlook.microsoft.com</li>
+          <li>Set default url to be https://outlook.microsoft.com/v2 instead of
+            https://outlook.microsoft.com</li>
           <li>Remove activityHub eventHandlers for the outlook-v1 events</li>
         </ul>
       </description>
@@ -865,17 +1043,20 @@
         <ul>
           <li>Update electron to 35.1.2</li>
           <li>Update electron-builder to 26.0.12</li>
-          <li>BREAKING CHANGE: deprecating customUserDir as eletron doesn't support camelCase on those anymore. Use ELECTRON_USER_DATA_PATH env variable instead</li>
+          <li>BREAKING CHANGE: deprecating customUserDir as eletron doesn't support camelCase on
+            those anymore. Use ELECTRON_USER_DATA_PATH env variable instead</li>
         </ul>
       </description>
     </release>
     <release version="1.13.2" date="2025-03-25">
       <description>
         <ul>
-          <li>Update the deep link regex to allow /l/chat deep links in addition to meetings and channels</li>
+          <li>Update the deep link regex to allow /l/chat deep links in addition to meetings and
+            channels</li>
           <li>Increase dependency versions to include fix from electron for #1487</li>
           <li>Checking if the settings file exists when trying to restore it to fix #1547</li>
-          <li>Add screen-wake-lock, persistent-storage and geolocation to the allowed permission, and add sharepoint.com and outlook.office.com to the allowed domains</li>
+          <li>Add screen-wake-lock, persistent-storage and geolocation to the allowed permission,
+            and add sharepoint.com and outlook.office.com to the allowed domains</li>
         </ul>
       </description>
     </release>
@@ -883,7 +1064,8 @@
       <description>
         <ul>
           <li>Update electron to 34.4.5 and other small library updates to fix issue 1590</li>
-          <li>Fixing permissions to allow copy link that stopped working when adding the permissionHandlersConfig (issue 1585)</li>
+          <li>Fixing permissions to allow copy link that stopped working when adding the
+            permissionHandlersConfig (issue 1585)</li>
         </ul>
       </description>
     </release>
@@ -897,8 +1079,10 @@
     <release version="1.12.8" date="2025-02-21">
       <description>
         <ul>
-          <li>Adding permissionCheckHandler config option to verify if 3rd party cookies are affecting token refreshing</li>
-          <li>Removing enableBackgroundCallsAuthentication config option as it was broken, and probabaly not doing anything for us</li>
+          <li>Adding permissionCheckHandler config option to verify if 3rd party cookies are
+            affecting token refreshing</li>
+          <li>Removing enableBackgroundCallsAuthentication config option as it was broken, and
+            probabaly not doing anything for us</li>
           <li>Update electron to 33.4.1</li>
         </ul>
       </description>
@@ -906,9 +1090,13 @@
     <release version="1.12.7" date="2025-01-15">
       <description>
         <ul>
-          <li>Adding enableBackgroundCallsAuthentication config option to validate if this keeps the user authenticated for longer</li>
-          <li>Removing the writeUrlBlockLog function that use to log those requests into a file for debugging</li>
-          <li>Handling of UnhandledPromiseRejectionWarning: TypeError: Cannot read properties of undefined (reading 'webContents') at PowerMonitor.refresh (.../app/connectionManager/index.js:31:34)</li>
+          <li>Adding enableBackgroundCallsAuthentication config option to validate if this keeps the
+            user authenticated for longer</li>
+          <li>Removing the writeUrlBlockLog function that use to log those requests into a file for
+            debugging</li>
+          <li>Handling of UnhandledPromiseRejectionWarning: TypeError: Cannot read properties of
+            undefined (reading 'webContents') at PowerMonitor.refresh
+            (.../app/connectionManager/index.js:31:34)</li>
           <li>Checking the tray status before trying to update the badge count</li>
         </ul>
       </description>
@@ -1008,7 +1196,8 @@
       <description>
         <ul>
           <li>Automated network check and deprecating `onlineCheckMethod`</li>
-          <li>Changing default logger to console.info and no file, instead of using the electron-log defaults</li>
+          <li>Changing default logger to console.info and no file, instead of using the electron-log
+            defaults</li>
         </ul>
       </description>
     </release>
@@ -1065,8 +1254,10 @@
     <release version="1.9.4" date="2024-08-23">
       <description>
         <ul>
-          <li>Update the logger to be `electron-log` by default, and update the documentation, as the config options don't seem to overwrite the logger</li>
-          <li>Adding a new conditional for msoutlook meeting invites to handle the differences between v1 and v2</li>
+          <li>Update the logger to be `electron-log` by default, and update the documentation, as
+            the config options don't seem to overwrite the logger</li>
+          <li>Adding a new conditional for msoutlook meeting invites to handle the differences
+            between v1 and v2</li>
         </ul>
       </description>
     </release>
@@ -1075,8 +1266,8 @@
         <ul>
           <li>Revert the default url to be outlook v1, not v2.</li>
           <li>Update the logger to be `console` by default, as the documentation indicates</li>
-          <li>Update electron from  30.2.0 to 30.4.0</li>
-          <li>Update electron from  eslint and global libraries</li>
+          <li>Update electron from 30.2.0 to 30.4.0</li>
+          <li>Update electron from eslint and global libraries</li>
         </ul>
       </description>
     </release>
@@ -1098,7 +1289,8 @@
       <description>
         <ul>
           <li>Moving from lucid-log to electron-log</li>
-          <li>Adding --logConfig option to allow choosing between console, electron-log or Falsy (no logs in console)</li>
+          <li>Adding --logConfig option to allow choosing between console, electron-log or Falsy (no
+            logs in console)</li>
           <li>Adding --help option to show the config options</li>
           <li>Deprecating --appLogLevels in favor of --logConfig</li>
           <li>Adding deprecated warning popup if deprecated options found to be in use</li>
@@ -1110,7 +1302,8 @@
     <release version="1.8.1" date="2024-07-10">
       <description>
         <ul>
-          <li>Fix awayOnSystemIdle behaviour when locking the screen: now it shows status as "Available" when locking the screen with awayOnSystemIdle = false</li>
+          <li>Fix awayOnSystemIdle behaviour when locking the screen: now it shows status as
+            "Available" when locking the screen with awayOnSystemIdle = false</li>
         </ul>
       </description>
     </release>
@@ -1119,7 +1312,8 @@
         <ul>
           <li>Increase electron version to 30.1.2</li>
           <li>Fix handleOnCallConnected not calling disable screen lock</li>
-          <li>Adding contextIsolation and sandbox config options. These will break some functionality but are added as a WIP to help assessing what it would break</li>
+          <li>Adding contextIsolation and sandbox config options. These will break some
+            functionality but are added as a WIP to help assessing what it would break</li>
         </ul>
       </description>
     </release>
@@ -1127,7 +1321,8 @@
       <description>
         <ul>
           <li>Add watchConfigFile option to restart the app if the configuration changes</li>
-          <li>Modify configError message to have an icon and adding the ability to provide warning dialogs (for config deprecations)</li>
+          <li>Modify configError message to have an icon and adding the ability to provide warning
+            dialogs (for config deprecations)</li>
           <li>Changing app description to be more flathub compliat</li>
           <li>Refactoring around inTune and the config file handling</li>
           <li>Refactoring events to all be kebab-case instead of a mix of kebab-case and camelCase</li>
@@ -1160,7 +1355,8 @@
     <release version="1.7.1" date="2024-06-11">
       <description>
         <ul>
-          <li>Adding a meetupJoinRegEx config option to handle meetup-join/channel regular expressions</li>
+          <li>Adding a meetupJoinRegEx config option to handle meetup-join/channel regular
+            expressions</li>
           <li>Aligning setWindowOpenHandler and processArgs to use the meetupJoinRegEx config option</li>
           <li>Small linting fixes for css files</li>
         </ul>
@@ -1213,7 +1409,8 @@
     <release version="1.5.0" date="2024-05-28">
       <description>
         <ul>
-          <li>Renaming ssoUser to ssoBasicAuthUser,  and ssoPasswordCommand to ssoBasicAuthPassswordCommand.</li>
+          <li>Renaming ssoUser to ssoBasicAuthUser, and ssoPasswordCommand to
+            ssoBasicAuthPassswordCommand.</li>
           <li>Adding the config option trayIconEnabled that defaults to true</li>
         </ul>
       </description>
@@ -1263,7 +1460,8 @@
     <release version="1.4.34" date="2024-05-01">
       <description>
         <ul>
-          <li>Electron version downgraded to 29.3.0 due to inconsistent behaviour in different desktop environments</li>
+          <li>Electron version downgraded to 29.3.0 due to inconsistent behaviour in different
+            desktop environments</li>
         </ul>
       </description>
     </release>
@@ -1279,9 +1477,10 @@
       <description>
         <ul>
           <li>
-						Revert "Build universal app for Mac" - the unsigned package does not run on Apple Silicon.
-						See KNOWN_ISSUES.md for steps how to build the app for Apple Silicon locally.
-					</li>
+            Revert "Build universal app for Mac" - the unsigned package does not run on Apple
+            Silicon.
+            See KNOWN_ISSUES.md for steps how to build the app for Apple Silicon locally.
+          </li>
         </ul>
       </description>
     </release>
@@ -1374,17 +1573,20 @@
     <release version="1.4.19" date="2024-04-05">
       <description>
         <ul>
-          <li>updating tray icon with the number in the document.title. This is hidden behind a feature flag/config option called useMutationTitleLogic</li>
+          <li>updating tray icon with the number in the document.title. This is hidden behind a
+            feature flag/config option called useMutationTitleLogic</li>
           <li>moved trayIconRenderer out of the activityHub, and to react to events instead.</li>
           <li>re-order config readme to show in the right order.</li>
-          <li>removing the 'removal' of the opt in for outlookv2. Now if you use that feature flag and want to revert you will need to do it manually.</li>
+          <li>removing the 'removal' of the opt in for outlookv2. Now if you use that feature flag
+            and want to revert you will need to do it manually.</li>
         </ul>
       </description>
     </release>
     <release version="1.4.18" date="2024-04-04">
       <description>
         <ul>
-          <li>adding how to debug in bug report, moving react logic into its own ha… by @ariel-rivo in #1176</li>
+          <li>adding how to debug in bug report, moving react logic into its own ha… by @ariel-rivo
+            in #1176</li>
           <li>Feature/outlook v2 changes theme by @ariel-rivo in #1177</li>
         </ul>
       </description>
@@ -1399,7 +1601,8 @@
     <release version="1.4.16" date="2024-03-28">
       <description>
         <ul>
-          <li>Removing the angular recurring call to disable some promotions as I s… by @ariel-rivo in #1152</li>
+          <li>Removing the angular recurring call to disable some promotions as I s… by @ariel-rivo
+            in #1152</li>
           <li>Hotfix/remove recurring angular call by @ariel-rivo in #1153</li>
           <li>Hotfix/remove recurring angular call by @ariel-rivo in #1154</li>
           <li>add support for changing idle (away) state in Outlook2 by @bastidest in #1157</li>
@@ -1409,7 +1612,8 @@
     <release version="1.4.15" date="2024-03-23">
       <description>
         <ul>
-          <li>Added bail out logic to the angular detection as this is creating some memory issues in some users</li>
+          <li>Added bail out logic to the angular detection as this is creating some memory issues
+            in some users</li>
         </ul>
       </description>
     </release>
@@ -1437,14 +1641,16 @@
     <release version="1.4.11" date="2024-02-14">
       <description>
         <ul>
-          <li>Fix: MacOS - Disable Option + Left / Right keyboard shortcuts for history navigation (it is used for word jumping on MacOS)</li>
+          <li>Fix: MacOS - Disable Option + Left / Right keyboard shortcuts for history navigation
+            (it is used for word jumping on MacOS)</li>
         </ul>
       </description>
     </release>
     <release version="1.4.10" date="2024-02-04">
       <description>
         <ul>
-          <li>New: Experimental switch --awayOnSystemIdle which sets the user status to away when system goes idle</li>
+          <li>New: Experimental switch --awayOnSystemIdle which sets the user status to away when
+            system goes idle</li>
         </ul>
       </description>
     </release>
@@ -1613,7 +1819,8 @@
     <release version="1.3.12" date="2023-09-28">
       <description>
         <ul>
-          <li>Fix: Import empty certificate path. The default config.clientCertPath is an empty string</li>
+          <li>Fix: Import empty certificate path. The default config.clientCertPath is an empty
+            string</li>
         </ul>
       </description>
     </release>
@@ -1628,7 +1835,8 @@
       <description>
         <ul>
           <li>Fix: fixed HTTPS network check from behind an HTTP proxy</li>
-          <li>New: Added --onlineCheckMethod {https,dns,native,none} to enable picking a different network check method (or disabling)</li>
+          <li>New: Added --onlineCheckMethod {https,dns,native,none} to enable picking a different
+            network check method (or disabling)</li>
         </ul>
       </description>
     </release>
@@ -1656,7 +1864,8 @@
     <release version="1.3.5" date="2023-08-20">
       <description>
         <ul>
-          <li>New: App now waits for network during start up. It waits for up to 30 seconds before becomes idle.</li>
+          <li>New: App now waits for network during start up. It waits for up to 30 seconds before
+            becomes idle.</li>
         </ul>
       </description>
     </release>
@@ -1700,7 +1909,9 @@
       <description>
         <ul>
           <li>New: Workaround solution for screen sharing issues in Wayland</li>
-          <li>New: --bypassWaylandSourceSelection flag for those desktop environments that do not require additional video source selection dialog during screen-sharing request under Wayland</li>
+          <li>New: --bypassWaylandSourceSelection flag for those desktop environments that do not
+            require additional video source selection dialog during screen-sharing request under
+            Wayland</li>
         </ul>
       </description>
     </release>
@@ -1729,7 +1940,8 @@
     <release version="1.2.3" date="2023-07-09">
       <description>
         <ul>
-          <li>New: Command-line argument --defaultURLHandler to change the browser application to be used to open links instead of the system default</li>
+          <li>New: Command-line argument --defaultURLHandler to change the browser application to be
+            used to open links instead of the system default</li>
         </ul>
       </description>
     </release>
@@ -1778,7 +1990,8 @@
     <release version="1.1.4" date="2023-06-15">
       <description>
         <ul>
-          <li>New: Added flag --disableNotificationWindowFlash which disables flashing the window frame when there is a new notification</li>
+          <li>New: Added flag --disableNotificationWindowFlash which disables flashing the window
+            frame when there is a new notification</li>
         </ul>
       </description>
     </release>
@@ -1822,15 +2035,18 @@
       <description>
         <ul>
           <li>New: Now custom background images can be downloaded from a remote server</li>
-          <li>New: Command line parameter --customBGServiceIgnoreMSDefaults to ignore Microsoft provided images</li>
-          <li>New: Custom background service 'config.json' need not have prefix '/outlook-for-linux/custom-bg/' for 'src' and 'thumb_src'</li>
+          <li>New: Command line parameter --customBGServiceIgnoreMSDefaults to ignore Microsoft
+            provided images</li>
+          <li>New: Custom background service 'config.json' need not have prefix
+            '/outlook-for-linux/custom-bg/' for 'src' and 'thumb_src'</li>
         </ul>
       </description>
     </release>
     <release version="1.0.86" date="2023-05-11">
       <description>
         <ul>
-          <li>New: User can set custom backgrounds for video calls. Read the documentation in git repo</li>
+          <li>New: User can set custom backgrounds for video calls. Read the documentation in git
+            repo</li>
         </ul>
       </description>
     </release>
@@ -1838,8 +2054,10 @@
       <description>
         <ul>
           <li>New: CTRL + Click for SSO login.</li>
-          <li>New: Settings menu entry with 'Save' and 'Restore'. Settings saved and restored are theme, chat density, devices.</li>
-          <li>New: Extended quit menu with 'Normally' and 'Clear Storage'. 'Normally' would be the default but 'Clear Storage' would give a fresh start on next launch.</li>
+          <li>New: Settings menu entry with 'Save' and 'Restore'. Settings saved and restored are
+            theme, chat density, devices.</li>
+          <li>New: Extended quit menu with 'Normally' and 'Clear Storage'. 'Normally' would be the
+            default but 'Clear Storage' would give a fresh start on next launch.</li>
         </ul>
       </description>
     </release>
@@ -1911,7 +2129,8 @@
     <release version="1.0.68" date="2023-04-19">
       <description>
         <ul>
-          <li>New: Disable/Enable Notification Sound if not Available with --disableNotificationSoundIfNotAvailable flag</li>
+          <li>New: Disable/Enable Notification Sound if not Available with
+            --disableNotificationSoundIfNotAvailable flag</li>
           <li>Fix: Outlook gets unloaded after suspend</li>
           <li>Minor code optimization</li>
         </ul>
@@ -1948,7 +2167,8 @@
     <release version="1.0.61" date="2023-04-15">
       <description>
         <ul>
-          <li>New: Command line option --screenLockInhibitionMethod to choose screen lock inhibition method. Possible values are Electron and WakeLockSentinel</li>
+          <li>New: Command line option --screenLockInhibitionMethod to choose screen lock inhibition
+            method. Possible values are Electron and WakeLockSentinel</li>
         </ul>
       </description>
     </release>
@@ -1979,7 +2199,8 @@
           <li>Fix: Click on link to external meetings is ignored</li>
           <li>Fix: No longer able to open meeting invitations in app</li>
           <li>Fix: Option for SSO Login Popups for certain Apps</li>
-          <li>Fix: The new-window event is deprecated and will be removed. Please use contents.setWindowOpenHandler() instead</li>
+          <li>Fix: The new-window event is deprecated and will be removed. Please use
+            contents.setWindowOpenHandler() instead</li>
           <li>New: Set default spellchecker language to en-US</li>
           <li>New: Disable hardware media key handling</li>
         </ul>
@@ -2039,7 +2260,8 @@
     <release version="1.0.42" date="2022-10-08">
       <description>
         <ul>
-          <li>Fix: The interstitial page of "Open Outlook in Browser" / "Download Linux Client" / "Open in Outlook App" opens when the app is started. By @breunigs</li>
+          <li>Fix: The interstitial page of "Open Outlook in Browser" / "Download Linux Client" /
+            "Open in Outlook App" opens when the app is started. By @breunigs</li>
         </ul>
       </description>
     </release>
@@ -2077,7 +2299,9 @@
     <release version="1.0.37" date="2022-09-14">
       <description>
         <ul>
-          <li>New: Command line argument --appLogLevels for controlling application logs. This can have values error, warn, info, debug. It can be single or multiple levels separated by comma. Default is error. Ex: --appLogLevels=error,warn</li>
+          <li>New: Command line argument --appLogLevels for controlling application logs. This can
+            have values error, warn, info, debug. It can be single or multiple levels separated by
+            comma. Default is error. Ex: --appLogLevels=error,warn</li>
         </ul>
       </description>
     </release>
@@ -2157,7 +2381,8 @@
       <description>
         <ul>
           <li>Bumped electron version to 20.0.0</li>
-          <li>Spellchecker is no longer available due to incompatibilities with the latest node versions</li>
+          <li>Spellchecker is no longer available due to incompatibilities with the latest node
+            versions</li>
         </ul>
       </description>
     </release>
@@ -2171,24 +2396,26 @@
     <release version="1.0.23" date="2022-01-14">
       <description>
         <p>
-					Fixes available in this build:
-				</p>
+          Fixes available in this build:
+        </p>
         <ul>
-          <li>Fix: #455 Screen share: black screen + mouse vs Ubuntu 21.04 + Chrome. Thanks to @pablorq, @herbiejhopkins and @ariel-rivo</li>
+          <li>Fix: #455 Screen share: black screen + mouse vs Ubuntu 21.04 + Chrome. Thanks to
+            @pablorq, @herbiejhopkins and @ariel-rivo</li>
         </ul>
         <ul>
-          <li>Fix: #505 Cannot share screen nor window with snap. Thanks to @crazyscientist and @jijojosephk.</li>
+          <li>Fix: #505 Cannot share screen nor window with snap. Thanks to @crazyscientist and
+            @jijojosephk.</li>
         </ul>
       </description>
     </release>
     <release version="1.0.20" date="2021-11-02">
       <description>
         <p>
-					Fixes available in this build:
-				</p>
+          Fixes available in this build:
+        </p>
         <p>
-					Thanks @DiegoChajtur for reporting #447
-				</p>
+          Thanks @DiegoChajtur for reporting #447
+        </p>
         <ul>
           <li>#447: Zoom resets to 100% on app close or refresh</li>
         </ul>
@@ -2197,11 +2424,11 @@
     <release version="1.0.19" date="2021-10-29">
       <description>
         <p>
-					Fixes available in this build:
-				</p>
+          Fixes available in this build:
+        </p>
         <p>
-					Thanks @FPSUsername for reporting #488
-				</p>
+          Thanks @FPSUsername for reporting #488
+        </p>
         <ul>
           <li>#488: Javascript error in main process</li>
         </ul>
@@ -2210,11 +2437,11 @@
     <release version="1.0.18" date="2021-10-28">
       <description>
         <p>
-					Latest release is out!
-				</p>
+          Latest release is out!
+        </p>
         <p>
-					Thanks to all who contributed to this project.
-				</p>
+          Thanks to all who contributed to this project.
+        </p>
         <ul>
           <li>Fix: #497 Flatpak install - Not launching from menu entry</li>
         </ul>
@@ -2223,11 +2450,11 @@
     <release version="1.0.17" date="2021-10-28">
       <description>
         <p>
-					Screen sharing now works.
-				</p>
+          Screen sharing now works.
+        </p>
         <p>
-					Thanks to all who contributed to this project.
-				</p>
+          Thanks to all who contributed to this project.
+        </p>
         <ul>
           <li>Fix: #492 Can't share screen on Ubuntu</li>
         </ul>
@@ -2236,11 +2463,11 @@
     <release version="1.0.16" date="2021-10-28">
       <description>
         <p>
-					This release has been focused on fixing flatpak runtime issues.
-				</p>
+          This release has been focused on fixing flatpak runtime issues.
+        </p>
         <p>
-					Thanks to all who contributed to this project.
-				</p>
+          Thanks to all who contributed to this project.
+        </p>
         <ul>
           <li>Fix: #489 - Application fails to launch</li>
           <li>Known issue: Screen sharing does not work</li>
@@ -2250,11 +2477,11 @@
     <release version="1.0.15" date="2021-10-24">
       <description>
         <p>
-					This release has been focused on fixing flatpak runtime issues.
-				</p>
+          This release has been focused on fixing flatpak runtime issues.
+        </p>
         <p>
-					Thanks to all who contributed to this project.
-				</p>
+          Thanks to all who contributed to this project.
+        </p>
         <ul>
           <li>#489</li>
         </ul>
@@ -2263,11 +2490,12 @@
     <release version="1.0.13" date="2021-10-24">
       <description>
         <p>
-					This release has been focused on fixing small issues and improving screen sharing capabilities.
-				</p>
+          This release has been focused on fixing small issues and improving screen sharing
+          capabilities.
+        </p>
         <p>
-					Thanks to all who contributed to this project.
-				</p>
+          Thanks to all who contributed to this project.
+        </p>
         <ul>
           <li>Major bump from version 1.0.0 to 1.0.13</li>
           <li>Migrated to Electron v15</li>
@@ -2277,28 +2505,35 @@
     <release version="1.0.0" date="2019-11-01">
       <description>
         <p>
-					While we wait for Microsoft... Here we go, we are now version 1.0.0 🍾🎉
+          While we wait for Microsoft... Here we go, we are now version 1.0.0 🍾🎉
 
-					This release has been focus on fixing small issues, improving config options (specially for proxy),
-					adding some bots to help automation, adding more functionality to the right click button
-					and automatically place your downloads into the download folder (opt in feature)
-				</p>
+          This release has been focus on fixing small issues, improving config options (specially
+          for proxy),
+          adding some bots to help automation, adding more functionality to the right click button
+          and automatically place your downloads into the download folder (opt in feature)
+        </p>
         <p>
-					Thanks to @standagh, @emanuelbatista, @jef79m and everybody that created issues/enhancements, fixed and/or tested them.
+          Thanks to @standagh, @emanuelbatista, @jef79m and everybody that created
+          issues/enhancements, fixed and/or tested them.
 
-					Special thanks to @julian-alarcon for continuously supporting the snap version of this project and to anyone else that is supporting other package types.
+          Special thanks to @julian-alarcon for continuously supporting the snap version of this
+          project and to anyone else that is supporting other package types.
 
-					Thanks also to @byteSamurai for introducing hacktoverfest. I manage to get a t-shirt and to get a few people on my team to also contribute.
+          Thanks also to @byteSamurai for introducing hacktoverfest. I manage to get a t-shirt and
+          to get a few people on my team to also contribute.
 
-					Its been a long ride, and looks like Microsoft has heard us out loud, but until they got something working as stable as this, I will continue contributing.
+          Its been a long ride, and looks like Microsoft has heard us out loud, but until they got
+          something working as stable as this, I will continue contributing.
 
-					Release notes partly done by Stamp.
-				</p>
+          Release notes partly done by Stamp.
+        </p>
         <ul>
-          <li>Adding electron dl to automatically place your dowloads into the dowload folder (opt-in feature, check the config options) (#295)</li>
+          <li>Adding electron dl to automatically place your dowloads into the dowload folder
+            (opt-in feature, check the config options) (#295)</li>
           <li>Enabling the right click on url and adding copy URL to that menu option (#294)</li>
           <li>Add proxy server to config options to ease configuration (#292)</li>
-          <li>Adding the 'try-supported-channel-layouts' to avoid locking the audio on the 1st instance (#291)</li>
+          <li>Adding the 'try-supported-channel-layouts' to avoid locking the audio on the 1st
+            instance (#291)</li>
           <li>Feature/fix anylint issues and close #272 (#288)</li>
           <li>Bump eslint-utils from 1.3.1 to 1.4.2 (#287)</li>
           <li>fix: enable meetups join also for https protocol links (#283)</li>
@@ -2316,50 +2551,72 @@
     </release>
     <release version="0.7.0" date="2019-08-19">
       <description>
-        <p>Because #217, you need to clear you config folder before your 1st login (config folder locations). This is not necessary if you are moving from version 0.6.6 or higher.</p>
+        <p>Because #217, you need to clear you config folder before your 1st login (config folder
+          locations). This is not necessary if you are moving from version 0.6.6 or higher.</p>
         <p>This release is been mostly concentrated on bug fixes and making this a bit more stable.</p>
         <p>Extras</p>
         <p>Apologies if I have missed anyone.</p>
         <ul>
-          <li>Fix #220. Electron's getLocale, and Chromium's l10n_util, can return the language code in the IETF BCP 47 format (en-US) instead of the ISO 15897 format (en_US). Hunspell, the dictionaries included with this project, and the JavaScript code here assumes the ISO 15897 format, so this hotfix converts what getLocale returns. (#234) (97eb15f) Thanks to @pnickerson-cashstar</li>
+          <li>Fix #220. Electron's getLocale, and Chromium's l10n_util, can return the language code
+            in the IETF BCP 47 format (en-US) instead of the ISO 15897 format (en_US). Hunspell, the
+            dictionaries included with this project, and the JavaScript code here assumes the ISO
+            15897 format, so this hotfix converts what getLocale returns. (#234) (97eb15f) Thanks to
+            @pnickerson-cashstar</li>
           <li>Add flatpak to configuration directory list (#232) (afbb725) Thanks to @agates</li>
           <li>Fix #208. Increasing the electron-builder (#231) (555e364)</li>
-          <li>Fix #221: updating readme with a link to AppImageLauncher (#226) (4fce0df) Thanks to @orange-buffalo</li>
-          <li>Fix #171. Can't open Microsoft Outlook - blank screen (#218) (f0242d2) Thanks to @inglor and @basaas</li>
+          <li>Fix #221: updating readme with a link to AppImageLauncher (#226) (4fce0df) Thanks to
+            @orange-buffalo</li>
+          <li>Fix #171. Can't open Microsoft Outlook - blank screen (#218) (f0242d2) Thanks to
+            @inglor and @basaas</li>
           <li>Fix #204. Updating default user agent string (#217) (952c55a) Thanks to @whofferbert</li>
-          <li>Feature #185 Adding the ability to toogle fullscreen f11 (#216) (adeec1d) Thanks to @rt3norio</li>
-          <li>Update KNOWN_ISSUES to reference cache folder (#171) (#210) (36af526) Thanks to @skyghis</li>
-          <li>Fix #182. Better handle external requests in new windows (#206) (599e140) Thanks to @HarlemSquirrel</li>
+          <li>Feature #185 Adding the ability to toogle fullscreen f11 (#216) (adeec1d) Thanks to
+            @rt3norio</li>
+          <li>Update KNOWN_ISSUES to reference cache folder (#171) (#210) (36af526) Thanks to
+            @skyghis</li>
+          <li>Fix #182. Better handle external requests in new windows (#206) (599e140) Thanks to
+            @HarlemSquirrel</li>
         </ul>
         <ul>
-          <li>Special thanks also to all the people that reported issues, tested them, fixed them, improved the documentation, and, in general, helped making this a bit more stable. All of this will not be possible with your contributions.</li>
+          <li>Special thanks also to all the people that reported issues, tested them, fixed them,
+            improved the documentation, and, in general, helped making this a bit more stable. All
+            of this will not be possible with your contributions.</li>
         </ul>
       </description>
     </release>
     <release version="0.4.0" date="2019-07-19">
       <description>
-        <p>Using gitflow from now on for releases (having master and develop branches) (Thanks to @julian-alarcon)</p>
+        <p>Using gitflow from now on for releases (having master and develop branches) (Thanks to
+          @julian-alarcon)</p>
         <p>#149 Re-implementing the spellchecker to improve performance. (PR #152, #155 and #163)</p>
         <p>#123 Is now possible as the main issue was with the spellchecker (issue #149)</p>
         <p>#41 Outlook-for-linux now also available in Flatpak! (Thanks to @gabops)</p>
         <p>#99 Fixing the cursor in snap (PR #168)</p>
-        <p>#61 Improving the screen-share quality by adding a white end to the browserviews. This is a chrome issue that basically doesn't trigger then the antialiasing. Strange but it works! (PR #165)</p>
-        <p>#89 Adding the basic part for the xdg-open. This might need a few improvements as it is currently quite difficult to test. (PR #170)</p>
-        <p>#162 Improving the documentation for snap as people keep coming back reporting camera not working (Thanks @julian-alarcon) (PR in #167)</p>
-        <p>#171 blank screen issue. Workaround found and documented (Thanks to @sant123 for documenting and the others for finding/testing the solution!) (PR #178)</p>
+        <p>#61 Improving the screen-share quality by adding a white end to the browserviews. This is
+          a chrome issue that basically doesn't trigger then the antialiasing. Strange but it works!
+          (PR #165)</p>
+        <p>#89 Adding the basic part for the xdg-open. This might need a few improvements as it is
+          currently quite difficult to test. (PR #170)</p>
+        <p>#162 Improving the documentation for snap as people keep coming back reporting camera not
+          working (Thanks @julian-alarcon) (PR in #167)</p>
+        <p>#171 blank screen issue. Workaround found and documented (Thanks to @sant123 for
+          documenting and the others for finding/testing the solution!) (PR #178)</p>
         <p>#176 Fixing the multiple icons in dock (Thanks to @lkms) (PR #179)</p>
         <p>#98 Fixing the loop when launching that some people where experiencing.</p>
-        <p>#109 and #107 Improving the handling of "about:blank" links (mainly connectors and preview images) (Thanks to @HarlemSquirrel) (PRs #131 and #172)</p>
+        <p>#109 and #107 Improving the handling of "about:blank" links (mainly connectors and
+          preview images) (Thanks to @HarlemSquirrel) (PRs #131 and #172)</p>
       </description>
     </release>
     <release version="0.3.0" date="2019-05-27">
       <description>
-        <p>Using gitflow from now on for releases (having master and develop branches) (Thanks to @julian-alarcon)</p>
+        <p>Using gitflow from now on for releases (having master and develop branches) (Thanks to
+          @julian-alarcon)</p>
         <p>automating the snap release (Thanks to @julian-alarcon and @benyanke)</p>
         <p>Fixing snap and camera not working together (Thanks to @julian-alarcon)</p>
-        <p>Unpacking the spellchecker dictionaries and adding the ones installed in hunspell (Thanks to @vadimi and @noderat )</p>
+        <p>Unpacking the spellchecker dictionaries and adding the ones installed in hunspell (Thanks
+          to @vadimi and @noderat )</p>
         <p>Updating the MS icon (Thanks to @julian-alarcon)</p>
-        <p>removing the apparmor=DENIED messages in syslog for snap build (Thanks to @julian-alarcon)</p>
+        <p>removing the apparmor=DENIED messages in syslog for snap build (Thanks to
+          @julian-alarcon)</p>
         <p>Adding the --minimized option to start the app minimized (Thanks to @didster)</p>
         <p>Adding webDebug to the tray menu options</p>
       </description>
