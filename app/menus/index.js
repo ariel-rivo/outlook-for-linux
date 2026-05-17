@@ -97,7 +97,9 @@ class Menus {
   }
 
   open() {
-    if (!this.window.isVisible()) {
+    if (this.window.isMinimized()) {
+      this.window.restore();
+    } else if (!this.window.isVisible()) {
       this.window.show();
     }
 
@@ -193,7 +195,7 @@ class Menus {
     console.debug("window close");
     if (!this.allowQuit && !this.configGroup.startupConfig.closeAppOnCross) {
       event.preventDefault();
-      this.hide();
+      this.window.minimize();
     } else {
       this.tray?.close();
       this.window.webContents.session.flushStorageData();
